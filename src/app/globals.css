@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/* MayFar design tokens — Dark Emotion. Dark is the default theme. */
+:root {
+  --bg: #000000;
+  --surface: #0b0b0d;
+  --surface-2: #121215;
+  --surface-3: #1a1a1e;
+  --border: #232328;
+  --border-strong: #34343b;
+  --text: #ffffff;
+  --muted: #a1a1aa;
+  --faint: #6b6b74;
+  --accent: #b3131b;
+  --accent-strong: #e0242d;
+  --accent-soft: rgba(179, 19, 27, 0.14);
+  --success: #3fb96b;
+  --warning: #e0a526;
+  --danger: #ef4444;
+  --inactive: #6b6b74;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #f6f6f7;
+  --surface: #ffffff;
+  --surface-2: #f1f1f3;
+  --surface-3: #e8e8eb;
+  --border: #dedee3;
+  --border-strong: #c7c7ce;
+  --text: #0a0a0b;
+  --muted: #55555d;
+  --faint: #85858d;
+  --accent: #a3111a;
+  --accent-strong: #c8161f;
+  --accent-soft: rgba(163, 17, 26, 0.09);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-fg: var(--text);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-inactive: var(--inactive);
+  --font-sans: "Outfit Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  letter-spacing: 0.005em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 1px solid var(--accent-strong);
+  outline-offset: 2px;
+}
+
+/* Thin, unobtrusive scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+input,
+textarea,
+select {
+  font-weight: 300;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.7);
+}
+[data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: none;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-fade-in {
+  animation: fade-in 220ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  :root {
+    --bg: #fff;
+    --surface: #fff;
+    --surface-2: #fff;
+    --surface-3: #f3f3f3;
+    --border: #ccc;
+    --text: #000;
+    --muted: #333;
+    --faint: #555;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-full {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+}
