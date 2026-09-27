@@ -13,9 +13,9 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx scripts/migrate.ts",
     "db:studio": "drizzle-kit studio",
-    "demo:seed": "tsx scripts/demo.ts seed",
-    "demo:remove": "tsx scripts/demo.ts remove",
-    "automations:run": "tsx scripts/run-automations.ts"
+    "demo:seed": "tsx --conditions=react-server scripts/demo.ts seed",
+    "demo:remove": "tsx --conditions=react-server scripts/demo.ts remove",
+    "automations:run": "tsx --conditions=react-server scripts/run-automations.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",

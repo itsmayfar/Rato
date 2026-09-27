@@ -215,6 +215,9 @@ export async function runAutomations(userId: string, opts: { ruleId?: string; fo
     try {
       const out = await execute(rule.kind as AutomationKind, rule, ctx);
       let created = 0;
+      const prefs = ctx.settings.notificationPrefs ?? {};
+      const PREF: Record<string, string> = { deadline: "deadlines", overdue: "overdue", missing_info: "missing_info", summary: "summaries", review: "reviews", follow_up: "follow_ups" };
+      out.notes = out.notes.filter((n) => prefs[PREF[n.kind] ?? ""] !== false);
       if ((rule.actions as { notify?: boolean }).notify !== false && out.notes.length) {
         const rows = await db
           .insert(notifications)

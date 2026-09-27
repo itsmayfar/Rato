@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   serverExternalPackages: ["postgres"],
   experimental: {
     serverActions: {
-      // uploads go through a route handler; actions only carry form data
-      bodySizeLimit: "2mb",
+      // file uploads use a streaming route handler; actions carry forms, CSV and backup files
+      bodySizeLimit: "25mb",
     },
   },
   poweredByHeader: false,

@@ -60,7 +60,8 @@ export function buildRecommendations(ctx: BusinessContext, limit = 5): Recommend
   }
 
   // 2. Overdue & due-soon tasks
-  const open = ctx.tasks.filter((t) => OPEN_TASK_STATUSES.includes(t.status) && t.status !== "blocked");
+  // Information tasks are represented by the richer "provide missing information" recommendations below
+  const open = ctx.tasks.filter((t) => OPEN_TASK_STATUSES.includes(t.status) && t.status !== "blocked" && t.source !== "information");
   const dueSoon = open
     .filter((t) => t.dueDate && t.dueDate <= addDays(today, 3))
     .sort((a, b) => (a.dueDate! < b.dueDate! ? -1 : 1) || (PRIORITY_RANK[b.priority] ?? 0) - (PRIORITY_RANK[a.priority] ?? 0));

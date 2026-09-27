@@ -33,7 +33,7 @@ import {
   VERIFICATION,
   VERSION_KINDS,
 } from "./constants";
-import type { FieldDef, Option } from "./fields";
+import { CURRENCIES, type FieldDef, type Option } from "./fields";
 import { PHASES } from "./workflow/phases";
 
 const rel = (key: string, label: string): FieldDef => ({ key, label, type: "select", allowCustom: true, options: [] });
@@ -391,4 +391,11 @@ export const MILESTONE_FIELDS: FieldDef[] = [
 export const FEEDBACK_FIELDS: FieldDef[] = [
   { key: "source", label: "From", type: "text", required: true, placeholder: "Mix engineer, friend, A&R…" },
   { key: "note", label: "Feedback", type: "textarea", required: true },
+];
+
+export const SETTINGS_FIELDS: FieldDef[] = [
+  { key: "currency", label: "Base currency", type: "select", options: CURRENCIES, required: true, help: "Totals and reports use this currency." },
+  { key: "timezone", label: "Time zone", type: "text", required: true, help: "IANA name, e.g. Europe/Berlin" },
+  { key: "language", label: "Language", type: "select", options: [{ value: "en", label: "English" }], required: true },
+  { key: "theme", label: "Theme", type: "select", options: [{ value: "dark", label: "Dark (default)" }, { value: "light", label: "Light" }], required: true },
 ];
