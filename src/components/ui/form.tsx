@@ -8,6 +8,9 @@ import { optionLabel, optionValue, toInputValue, type FieldDef } from "@/lib/fie
 import { cn } from "@/lib/utils";
 import { buttonClass } from "./primitives";
 
+export const filterClass =
+  "h-9 rounded-md border border-line bg-surface-2 px-3 text-sm text-fg placeholder:text-faint hover:border-line-strong focus:border-accent focus:outline-none";
+
 export const inputClass =
   "w-full rounded-md border border-line bg-surface-2 px-3 py-2 text-sm text-fg placeholder:text-faint transition-colors hover:border-line-strong focus:border-accent focus:outline-none disabled:opacity-50";
 

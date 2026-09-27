@@ -39,13 +39,18 @@ export function Calendar({
   today,
   basePath,
   params = {},
+  viewParam = "view",
+  views,
 }: {
   events: CalEvent[];
-  view: "month" | "week" | "list";
+  view: "month" | "week" | "day" | "list";
   anchor: string; // YYYY-MM-DD
   today: string;
   basePath: string;
   params?: Record<string, string | undefined>;
+  /** Query parameter used for the calendar view (when the page already uses "view"). */
+  viewParam?: string;
+  views?: readonly ("month" | "week" | "day" | "list")[];
 }) {
   const href = (over: Record<string, string>) => {
     const q = new URLSearchParams();
@@ -103,6 +108,23 @@ export function Calendar({
           })}
         </div>
       </div>
+    );
+  } else if (view === "day") {
+    title = formatDate(anchor, "long");
+    prev = addDays(anchor, -1);
+    next = addDays(anchor, 1);
+    const list = byDate.get(anchor) ?? [];
+    body = list.length ? (
+      <ul className="divide-y divide-line rounded-lg border border-line">
+        {list.map((e, i) => (
+          <li key={i} className={cn("flex items-center gap-4 border-l-2 px-4 py-3", TONE_BAR[e.tone ?? "accent"])}>
+            <Link href={e.href} className="min-w-0 flex-1 truncate text-sm hover:text-accent-strong">{e.label}</Link>
+            {e.meta && <span className="shrink-0 text-xs text-faint">{e.meta}</span>}
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p className="rounded-lg border border-dashed border-line p-8 text-center text-sm text-muted">Nothing planned for this day.</p>
     );
   } else if (view === "week") {
     const start = addDays(anchor, -weekday(anchor));
@@ -170,13 +192,13 @@ export function Calendar({
         <div className="flex items-center gap-2">
           {view !== "list" && (
             <>
-              <Link href={href({ view, date: prev })} className={buttonClass("ghost", "icon")} aria-label="Previous">
+              <Link href={href({ [viewParam]: view, date: prev })} className={buttonClass("ghost", "icon")} aria-label="Previous">
                 <ChevronLeft className="h-4 w-4" />
               </Link>
-              <Link href={href({ view, date: next })} className={buttonClass("ghost", "icon")} aria-label="Next">
+              <Link href={href({ [viewParam]: view, date: next })} className={buttonClass("ghost", "icon")} aria-label="Next">
                 <ChevronRight className="h-4 w-4" />
               </Link>
-              <Link href={href({ view, date: today })} className={buttonClass("ghost", "sm")}>
+              <Link href={href({ [viewParam]: view, date: today })} className={buttonClass("ghost", "sm")}>
                 Today
               </Link>
             </>
@@ -184,10 +206,10 @@ export function Calendar({
           <h2 className="ml-1 text-lg font-extralight">{title}</h2>
         </div>
         <div className="flex rounded-md border border-line p-0.5" role="tablist" aria-label="Calendar view">
-          {(["month", "week", "list"] as const).map((v) => (
+          {(views ?? (["month", "week", "list"] as const)).map((v) => (
             <Link
               key={v}
-              href={href({ view: v, date: anchor })}
+              href={href({ [viewParam]: v, date: anchor })}
               role="tab"
               aria-selected={v === view}
               className={cn("rounded px-3 py-1 text-xs capitalize", v === view ? "bg-surface-3 text-fg" : "text-muted hover:text-fg")}

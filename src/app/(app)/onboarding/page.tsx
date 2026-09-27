@@ -136,7 +136,7 @@ export default async function OnboardingPage({ searchParams }: { searchParams: P
               {step === "catalog" && (
                 <Notice className="mb-6" title="Import your catalog">
                   You can add tracks one by one or{" "}
-                  <Link href="/catalog/import" className="text-fg underline decoration-accent underline-offset-2">
+                  <Link href="/import/tracks" className="text-fg underline decoration-accent underline-offset-2">
                     import a CSV
                   </Link>
                   .

@@ -52,7 +52,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Prom
         purpose="Each track holds its metadata, audio versions, credits, rights and connections to releases, campaigns, tasks and finances."
         actions={
           <>
-            <LinkButton href="/catalog/import" variant="ghost"><Upload className="h-4 w-4" /> Import CSV</LinkButton>
+            <LinkButton href="/import/tracks" variant="ghost"><Upload className="h-4 w-4" /> Import CSV</LinkButton>
             <LinkButton href="/catalog/new" variant="primary"><Plus className="h-4 w-4" /> New track</LinkButton>
           </>
         }

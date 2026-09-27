@@ -122,7 +122,8 @@ export function QuestionFlow({
         <p className="text-sm text-muted">
           {open.length ? (
             <>
-              <span className="text-fg">{open.length}</span> question{open.length === 1 ? "" : "s"} need{open.length === 1 ? "s" : ""} an answer
+              <span className="text-fg">{open.filter((i) => i.required).length}</span> required question{open.filter((i) => i.required).length === 1 ? "" : "s"} open
+              {open.some((i) => !i.required) && <> · {open.filter((i) => !i.required).length} optional</>}
               {items.length - open.length > 0 && <> · {items.length - open.length} already saved and reused</>}.
             </>
           ) : (
