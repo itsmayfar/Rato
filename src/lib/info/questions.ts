@@ -8,7 +8,7 @@ export function toQuestions(items: InfoItem[], opts: { defaults?: Record<string,
   const derived: DerivedCheck[] = [];
   for (const i of items) {
     if (!i.editable) {
-      derived.push({ label: i.label, status: i.status, href: i.href, message: i.message, entityLabel: i.entityLabel, why: i.why });
+      derived.push({ uid: i.uid, label: i.label, status: i.status, href: i.href, message: i.message, entityLabel: i.entityLabel, why: i.why });
       continue;
     }
     const req = getRequirement(i.requirementId!);

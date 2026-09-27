@@ -18,6 +18,10 @@
   --warning: #e0a526;
   --danger: #ef4444;
   --inactive: #6b6b74;
+  /* chart palette — validated (CVD / contrast) against the dark surface */
+  --chart-1: #4f86d6;
+  --chart-2: #e0343b;
+  --chart-grid: #1f1f24;
   color-scheme: dark;
 }
 
@@ -34,6 +38,9 @@
   --accent: #a3111a;
   --accent-strong: #c8161f;
   --accent-soft: rgba(163, 17, 26, 0.09);
+  --chart-1: #3d6fb5;
+  --chart-2: #b3131b;
+  --chart-grid: #ececef;
   color-scheme: light;
 }
 

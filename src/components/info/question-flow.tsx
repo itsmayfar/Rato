@@ -25,7 +25,7 @@ export type QuestionItem = {
   groupDescription?: string;
 };
 
-export type DerivedCheck = { label: string; status: QuestionItem["status"]; href: string; message?: string; entityLabel: string; why?: string };
+export type DerivedCheck = { uid: string; label: string; status: QuestionItem["status"]; href: string; message?: string; entityLabel: string; why?: string };
 
 const STATUS_TEXT: Record<QuestionItem["status"], string> = {
   complete: "Saved",
@@ -75,11 +75,11 @@ export function QuestionFlow({
   const visible = (i: QuestionItem) => showAll || (i.status !== "complete" && i.status !== "not_applicable");
 
   const groups = useMemo(() => {
-    const map = new Map<string, { title: string; description?: string; items: QuestionItem[] }>();
+    const map = new Map<string, { key: string; title: string; description?: string; items: QuestionItem[] }>();
     for (const i of items) {
-      const gk = showEntity ? `${i.entityLabel}|${i.group}` : i.group;
+      const gk = showEntity ? `${i.name.split("__").slice(0, 2).join("__")}|${i.group}` : i.group;
       if (!map.has(gk))
-        map.set(gk, { title: showEntity ? `${i.groupTitle} — ${i.entityLabel}` : i.groupTitle, description: i.groupDescription, items: [] });
+        map.set(gk, { key: gk, title: showEntity ? `${i.groupTitle} — ${i.entityLabel}` : i.groupTitle, description: i.groupDescription, items: [] });
       map.get(gk)!.items.push(i);
     }
     return Array.from(map.values());
@@ -148,7 +148,7 @@ export function QuestionFlow({
             const anyVisible = g.items.some(visible);
             if (!anyVisible) return null;
             return (
-              <fieldset key={g.title} className="rounded-lg border border-line bg-surface p-5">
+              <fieldset key={g.key} className="rounded-lg border border-line bg-surface p-5">
                 <legend className="px-2 text-xs uppercase tracking-[0.16em] text-muted">{g.title}</legend>
                 {g.description && <p className="-mt-1 mb-4 text-sm text-faint">{g.description}</p>}
                 <div className="grid grid-cols-1 gap-x-6 gap-y-6 md:grid-cols-2">
@@ -200,7 +200,7 @@ export function QuestionFlow({
             <h3 className="mb-3 text-xs uppercase tracking-[0.16em] text-muted">Also required — completed elsewhere</h3>
             <ul className="divide-y divide-line">
               {derived.map((d) => (
-                <li key={`${d.entityLabel}-${d.label}`} className="flex flex-wrap items-center justify-between gap-3 py-2.5">
+                <li key={d.uid} className="flex flex-wrap items-center justify-between gap-3 py-2.5">
                   <div className="min-w-0">
                     <div className="flex flex-wrap items-center gap-2 text-sm">
                       <Badge tone={toneFor(d.status)}>{STATUS_TEXT[d.status]}</Badge>
