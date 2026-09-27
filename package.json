@@ -15,7 +15,9 @@
     "db:studio": "drizzle-kit studio",
     "demo:seed": "tsx --conditions=react-server scripts/demo.ts seed",
     "demo:remove": "tsx --conditions=react-server scripts/demo.ts remove",
-    "automations:run": "tsx --conditions=react-server scripts/run-automations.ts"
+    "automations:run": "tsx --conditions=react-server scripts/run-automations.ts",
+    "test:e2e": "node tests/e2e/smoke.mjs",
+    "test:e2e:mobile": "node tests/e2e/smoke.mjs --mobile"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",
@@ -38,6 +40,7 @@
     "@types/react-dom": "^19.3.0",
     "dotenv": "^18.0.4",
     "drizzle-kit": "^0.31.11",
+    "playwright-core": "1.56",
     "postcss": "^8.5.28",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.15",

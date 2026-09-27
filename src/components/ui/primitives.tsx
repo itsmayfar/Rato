@@ -46,7 +46,7 @@ export function LinkButton({
 
 export function Card({ className, children, ...props }: ComponentProps<"section">) {
   return (
-    <section className={cn("rounded-lg border border-line bg-surface p-5", className)} {...props}>
+    <section className={cn("min-w-0 rounded-lg border border-line bg-surface p-5", className)} {...props}>
       {children}
     </section>
   );

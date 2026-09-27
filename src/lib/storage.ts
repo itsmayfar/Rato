@@ -11,7 +11,7 @@ import { Readable } from "node:stream";
  * / remove by key) is intentionally small so an S3-compatible adapter can
  * replace it without touching callers.
  */
-const ROOT = path.resolve(process.env.STORAGE_DIR ?? "./storage");
+const ROOT = path.resolve(/* turbopackIgnore: true */ process.cwd(), process.env.STORAGE_DIR ?? "./storage");
 export const MAX_UPLOAD_BYTES = Number(process.env.MAX_UPLOAD_MB ?? 200) * 1024 * 1024;
 
 function resolveKey(key: string) {
