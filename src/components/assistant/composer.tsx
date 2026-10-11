@@ -20,7 +20,7 @@ function Send() {
   );
 }
 
-export function Composer({ conversationId, initial, suggestions }: { conversationId?: string; initial?: string; suggestions: string[] }) {
+export function Composer({ conversationId, initial, suggestions, commands = [] }: { conversationId?: string; initial?: string; suggestions: string[]; commands?: { command: string; label: string }[] }) {
   const [state, action] = useActionState(sendAssistantMessage, {} as ActionState);
   const router = useRouter();
   const ref = useRef<HTMLFormElement>(null);
@@ -32,12 +32,28 @@ export function Composer({ conversationId, initial, suggestions }: { conversatio
       if (id && id !== conversationId) router.replace(`/assistant?c=${id}`);
     }
   }, [state, conversationId, router]);
+  const fill = (text: string) => {
+    if (!area.current) return;
+    area.current.value = text;
+    area.current.focus();
+    area.current.setSelectionRange(text.length, text.length);
+  };
   return (
     <div>
+      {commands.length > 0 && (
+        <div className="mb-2 flex flex-wrap items-center gap-2" aria-label="Manager commands">
+          <span className="text-[10px] uppercase tracking-[0.2em] text-faint">Manager</span>
+          {commands.map((c) => (
+            <button key={c.command} type="button" title={c.label} onClick={() => fill(`${c.command} `)} className="rounded-full border border-line px-2.5 py-0.5 font-mono text-xs text-muted hover:border-accent hover:text-fg">
+              {c.command}
+            </button>
+          ))}
+        </div>
+      )}
       {!conversationId && (
         <div className="mb-3 flex flex-wrap gap-2">
           {suggestions.map((s) => (
-            <button key={s} type="button" onClick={() => { if (area.current) { area.current.value = s; area.current.focus(); } }} className="rounded-full border border-line px-3 py-1 text-xs text-muted hover:border-accent hover:text-fg">
+            <button key={s} type="button" onClick={() => fill(s)} className="rounded-full border border-line px-3 py-1 text-xs text-muted hover:border-accent hover:text-fg">
               {s}
             </button>
           ))}
@@ -51,7 +67,7 @@ export function Composer({ conversationId, initial, suggestions }: { conversatio
           defaultValue={initial}
           rows={2}
           aria-label="Message the assistant"
-          placeholder="Ask about your releases, tasks, finances… or ask for a plan or draft."
+          placeholder="Ask about your releases, tasks, finances… or use a command like /release La Noche."
           className="max-h-48 min-h-12 flex-1 resize-y bg-transparent px-2 py-1.5 text-sm text-fg placeholder:text-faint focus:outline-none"
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {

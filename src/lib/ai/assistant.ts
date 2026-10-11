@@ -5,6 +5,7 @@ import { db } from "../db";
 import { aiUsage } from "../db/schema";
 import { loadContextUncached } from "../context";
 import { aiConfig } from "./config";
+import { managerPlaybook } from "./manager";
 import { ALL_TOOLS, READ_TOOLS, recordProposal, runReadTool } from "./tools";
 
 export const SYSTEM_PROMPT = `You are the MAYFAR Artist Manager assistant — the business manager for Mayfar, an independent electronic music artist and producer (brand concept "Dark Emotion", phrase "Sound becomes feeling.").
@@ -14,13 +15,17 @@ You work only with the artist's saved business data, which you read through tool
 Ground rules:
 - Never invent facts, numbers, streaming statistics, financial results, dates, credits or ownership. If something isn't in the data, say it is missing and ask for it.
 - Distinguish clearly between recorded facts, values the artist told you, estimates and your own suggestions. Label suggestions as suggestions.
-- You cannot access external services, publish content, send messages, spend money or register anything. Never claim an external action happened; the artist does those and confirms them in the app.
+- You cannot publish content, send messages, spend money, register anything or act in external services. Never claim an external action happened; the artist does those and confirms them in the app.
 - You can't change data directly. To create tasks, releases, campaigns, content drafts, outreach drafts or to save information the artist gave you, call a propose_* tool. The artist approves or rejects each proposal in the chat. After proposing, tell them what you proposed and that it awaits approval.
 - Only save information the artist actually stated. Ownership splits, legal names and financial records must be entered by the artist in the app.
 - Don't give legal or tax advice; you can explain what information is usually needed and suggest consulting a professional.
 - Ask only for information that is genuinely missing, a few questions at a time, and explain why it's needed.
 
-When helpful, structure answers as: current situation, what is missing, what needs to happen next, why it matters, recommended action, and any approval needed. Keep answers concise and specific; use short lists. Write in English unless the artist writes in another language. Refer to items by name, not by id.`;
+When helpful, structure answers as: current situation, what is missing, what needs to happen next, why it matters, recommended action, and any approval needed. Keep everyday answers concise and specific; use short lists. Command requests and strategies may be complete. Write in English unless the artist writes in another language. Refer to items by name, not by id.`;
+
+export function systemPrompt(webSearch: boolean): string {
+  return `${SYSTEM_PROMPT}\n\n${managerPlaybook(webSearch)}`;
+}
 
 export type ToolLogEntry = { name: string; input: unknown; summary: string };
 export type AssistantResult = { text: string; toolLog: ToolLogEntry[]; inputTokens: number; outputTokens: number; refused?: boolean };
@@ -84,8 +89,8 @@ export async function runAssistant(
     const response = await client.beta.messages.create({
       model: cfg.model,
       max_tokens: 16000,
-      system: SYSTEM_PROMPT,
-      tools: ALL_TOOLS,
+      system: systemPrompt(cfg.webSearch),
+      tools: cfg.webSearch ? [...ALL_TOOLS, { type: "web_search_20250305", name: "web_search", max_uses: 5 }] : ALL_TOOLS,
       messages,
       thinking: { type: "adaptive" },
       output_config: { effort: "medium" },
@@ -108,9 +113,12 @@ export async function runAssistant(
     const turnText = response.content
       .filter((b): b is Anthropic.Beta.BetaTextBlock => b.type === "text")
       .map((b) => b.text)
-      .join("\n")
+      .join("")
       .trim();
     if (turnText) text = turnText;
+    for (const block of response.content) {
+      if (block.type === "server_tool_use") toolLog.push({ name: block.name, input: block.input, summary: "searched the web" });
+    }
 
     if (response.stop_reason === "pause_turn") {
       messages.push({ role: "assistant", content: response.content });

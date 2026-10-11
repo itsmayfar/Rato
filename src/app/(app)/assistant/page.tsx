@@ -7,6 +7,7 @@ import { ConfirmAction, InlineAction } from "@/components/ui/form";
 import { Badge, LinkButton, Notice, PageHeader, buttonClass } from "@/components/ui/primitives";
 import { decideProposal, deleteConversation } from "@/lib/actions/assistant";
 import { aiConfig } from "@/lib/ai/config";
+import { MANAGER_COMMANDS } from "@/lib/ai/manager";
 import { requireUser } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { aiConversations, aiMessages, aiProposedActions } from "@/lib/db/schema";
@@ -138,7 +139,7 @@ export default async function AssistantPage({ searchParams }: { searchParams: Pr
             })}
           </div>
           <div className="sticky bottom-0 bg-bg/90 pb-2 pt-3 backdrop-blur">
-            <Composer key={current?.id ?? "new"} conversationId={current?.id} initial={sp.q} suggestions={SUGGESTIONS} />
+            <Composer key={current?.id ?? "new"} conversationId={current?.id} initial={sp.q} suggestions={SUGGESTIONS} commands={MANAGER_COMMANDS.map(({ command, label }) => ({ command, label }))} />
           </div>
         </section>
       </div>

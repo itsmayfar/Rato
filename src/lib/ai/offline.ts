@@ -6,13 +6,22 @@ import { checklistProgress, effectiveChecklist } from "../releases/checklist";
 import type { BusinessContext } from "../types";
 import { formatDate, formatMoney } from "../utils";
 import { upcomingReleases } from "../workflow/phases";
+import { parseManagerCommand } from "./manager";
 
 /**
  * Offline assistant: answers common questions deterministically from stored
  * data when no AI provider is configured. It never generates new content.
  */
 export function offlineAnswer(ctx: BusinessContext, question: string): string {
-  const q = question.toLowerCase();
+  const cmd = parseManagerCommand(question);
+  if (cmd && cmd.command.command !== "/strategy" && cmd.command.command !== "/release") {
+    return [
+      `**${cmd.command.command}** (${cmd.command.label.toLowerCase()}) needs the full assistant: I’m in **offline mode**, so I can’t draft plans or messages.`,
+      "To enable it, set `ANTHROPIC_API_KEY` on the server (see Settings → AI). Meanwhile, ask “what should I do next?” for priorities from your stored data.",
+    ].join("\n\n");
+  }
+  // Offline, /strategy shows stored priorities and /release shows release status.
+  const q = cmd ? (cmd.command.command === "/strategy" ? "what should i do next" : "release") : question.toLowerCase();
   const cur = ctx.settings.currency;
   const lines: string[] = [];
 

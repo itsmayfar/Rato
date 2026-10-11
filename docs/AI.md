@@ -8,11 +8,33 @@ Set on the server and restart:
 ANTHROPIC_API_KEY=sk-ant-...     # from console.anthropic.com (paid API account)
 AI_MODEL=claude-opus-5           # optional; any Claude model ID
 AI_DAILY_REQUEST_LIMIT=200       # optional
+AI_WEB_SEARCH=on                 # optional; lets the assistant research labels, playlists, events (billed per search)
 ```
 
 **Settings → AI** shows the provider, model, whether a key is present (never the key itself), usage per day, errors, and an optional cost estimate (`AI_PRICE_INPUT_PER_MTOK` / `AI_PRICE_OUTPUT_PER_MTOK`).
 
 Without a key the assistant runs in **offline mode**: it answers common questions (priorities, missing information, releases, overdue tasks, finances, overview) directly from stored data and never generates new text. Everything else in the app works the same.
+
+## Manager commands
+
+The assistant follows an artist-manager playbook (`src/lib/ai/manager.ts`, adapted from the artist's own "Mayfar AI Manager" skill). Start a message with a command, or click it above the message box:
+
+| Command | Produces |
+|---|---|
+| `/strategy` | Growth plan: today, this week, this month, 3, 6 and 12 months |
+| `/release <song>` | Full release campaign: pre-release, platforms, playlists, release day, 7/30-day follow-up, captions, KPIs |
+| `/promo` | Organic + paid promotion with budget and stop criteria |
+| `/content` | Reels/TikTok/Shorts ideas, hook variations, captions, schedule |
+| `/playlist` | Playlist pitching strategy and pitch message |
+| `/labels` | Label shortlist evaluated on fit and submission method |
+| `/collab` | Collaboration shortlist and outreach message |
+| `/booking` | Clubs, promoters, festivals, agencies and outreach |
+| `/pr` | Blogs, media, channels, podcasts and outreach |
+| `/analytics` | What works, what doesn't, biggest opportunity/problem, next actions |
+
+Strategic answers follow *goal → strategy → action plan → examples → budget → deadlines → KPIs* and end with **NEXT 3 ACTIONS**. Artist facts come from the stored profile, not from the playbook. Plans can be turned into tasks, content drafts, campaigns or outreach drafts through approval-gated proposals.
+
+With `AI_WEB_SEARCH=on` the assistant searches the web before naming labels, playlists, events or contacts, and cites sources. Without it, it marks such names as unverified and says what to check. It never invents contacts, emails, submission links or statistics. Offline, `/strategy` and `/release` answer from stored data; the other commands need an API key.
 
 ## How it works
 
@@ -27,7 +49,7 @@ Without a key the assistant runs in **offline mode**: it answers common question
 
 | The assistant can | The assistant cannot |
 |---|---|
-| Read your saved data | Access external services or the internet |
+| Read your saved data (and search the web if `AI_WEB_SEARCH=on`) | Act in external services |
 | Identify missing information and ask for it | Publish, send, spend, register or delete anything |
 | Draft plans, tasks, captions, emails, campaigns | Change data without your approval |
 | Save information you told it — after approval | Enter legal names, ownership splits or financial records |

@@ -8,6 +8,7 @@ export function aiConfig() {
     provider,
     model: process.env.AI_MODEL?.trim() || "claude-opus-5",
     configured: provider === "anthropic" && Boolean(apiKey),
+    webSearch: ["on", "true", "1"].includes((process.env.AI_WEB_SEARCH ?? "").toLowerCase()),
     fallbacks: (process.env.AI_REFUSAL_FALLBACK ?? "default") !== "off",
     dailyLimit: Number(process.env.AI_DAILY_REQUEST_LIMIT ?? 200),
     priceIn: Number(process.env.AI_PRICE_INPUT_PER_MTOK ?? 0) || null,
