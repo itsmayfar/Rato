@@ -79,7 +79,7 @@ export default async function TrackPage({ params, searchParams }: { params: Prom
         purpose={[track.primaryArtist, track.featuredArtists.length ? `feat. ${track.featuredArtists.join(", ")}` : "", track.genre, track.bpm ? `${track.bpm} BPM` : "", track.musicalKey, formatDuration(track.durationSec)].filter((x) => x && x !== "—").join(" · ")}
         actions={
           <>
-            <StatusBadge status={track.status} tone={track.status === "Finished" ? "success" : "accent"} />
+            <StatusBadge status={track.status} tone={track.status === "Finished" || track.status === "Released" ? "success" : "accent"} />
             {!track.releaseIds.length && <LinkButton href={`/releases/new?track=${track.id}`} variant="outline">Plan release</LinkButton>}
             <ConfirmAction
               action={deleteTrack}

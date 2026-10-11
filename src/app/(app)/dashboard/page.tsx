@@ -63,7 +63,7 @@ export default async function Dashboard() {
 
   // C. Releases
   const upcoming = upcomingReleases(ctx);
-  const inProduction = ctx.tracks.filter((t) => !["Idea", "Finished", "Archived"].includes(t.status) && !t.actualReleaseDate);
+  const inProduction = ctx.tracks.filter((t) => !["Idea", "Finished", "Released", "Archived"].includes(t.status) && !t.actualReleaseDate);
   const recent = releasedReleases(ctx).filter((r) => r.releaseDate && r.releaseDate >= addDays(today, -60));
   const awaitingApproval = upcoming.filter((r) => r.status === "Ready for submission" || !r.coverApproved);
 

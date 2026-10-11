@@ -119,7 +119,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Prom
                             <Link href={`/catalog/${t.id}`} className="hover:text-accent-strong">{t.title}</Link>
                             <div className="flex items-center gap-2 text-xs text-faint">{t.projectCode}{t.featuredArtists.length > 0 && ` · feat. ${t.featuredArtists.join(", ")}`}{t.isDemo && <DemoBadge />}</div>
                           </Td>
-                          <Td><Badge tone={toneFor(t.status === "Finished" ? "complete" : t.status === "Archived" ? "archived" : "active")}>{t.status}</Badge></Td>
+                          <Td><Badge tone={toneFor(t.status === "Finished" || t.status === "Released" ? "complete" : t.status === "Archived" ? "archived" : "active")}>{t.status}</Badge></Td>
                           <Td className="w-40">
                             <div className="text-xs text-muted">{t.workflowStage}</div>
                             <Progress value={stageIdx + 1} max={workflow.length} className="mt-1" />

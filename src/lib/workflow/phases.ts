@@ -60,14 +60,18 @@ export function upcomingReleases(ctx: BusinessContext): ReleaseFull[] {
 export function releasedReleases(ctx: BusinessContext): ReleaseFull[] {
   return ctx.releases.filter((r) => r.status === "Released" || r.status === "Post-release review");
 }
+/** A track that is already out: marked "Released" or carrying an actual release date. */
+export function isReleasedTrack(t: { status: string; actualReleaseDate: string | null }): boolean {
+  return t.status === "Released" || !!t.actualReleaseDate;
+}
 export function activeTracks(ctx: BusinessContext): TrackFull[] {
-  return ctx.tracks.filter((t) => t.status !== "Archived" && t.status !== "Finished" && !t.actualReleaseDate);
+  return ctx.tracks.filter((t) => t.status !== "Archived" && t.status !== "Finished" && !isReleasedTrack(t));
 }
 /** Tracks heading to release: linked to an upcoming release or marked finished but unreleased. */
 export function tracksForRelease(ctx: BusinessContext): TrackFull[] {
   const upcoming = new Set(upcomingReleases(ctx).map((r) => r.id));
   return ctx.tracks.filter(
-    (t) => t.status !== "Archived" && (t.releaseIds.some((id) => upcoming.has(id)) || (t.status === "Finished" && !t.actualReleaseDate)),
+    (t) => t.status !== "Archived" && (t.releaseIds.some((id) => upcoming.has(id)) || (t.status === "Finished" && !isReleasedTrack(t))),
   );
 }
 
@@ -189,7 +193,7 @@ export const PHASES: PhaseDef[] = [
     ],
     evaluate(ctx) {
       const inProd = activeTracks(ctx);
-      const finished = ctx.tracks.filter((t) => t.status === "Finished" || t.actualReleaseDate);
+      const finished = ctx.tracks.filter((t) => t.status === "Finished" || isReleasedTrack(t));
       const finishedWithoutMaster = ctx.tracks.filter((t) => t.status === "Finished" && !hasApprovedMaster(t));
       const readyTracks = finished.filter((t) => {
         if (!hasApprovedMaster(t)) return false;

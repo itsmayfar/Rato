@@ -3,7 +3,7 @@ import { evaluateProfile, evaluateRelease, evaluateTrack, summarize } from "@/li
 import { summarizeSplits } from "@/lib/rights";
 import { effectiveChecklist, templatesFor } from "@/lib/releases/checklist";
 import { buildRecommendations } from "@/lib/recommendations";
-import { PHASES, recommendedPhase } from "@/lib/workflow/phases";
+import { PHASES, activeTracks, recommendedPhase, tracksForRelease } from "@/lib/workflow/phases";
 import type { ChecklistItem } from "@/lib/types";
 import { makeContext, makeRelease, makeTrack, master, rights, split } from "./fixtures";
 
@@ -212,6 +212,17 @@ describe("phases and recommendations", () => {
     expect(ev.criteriaMet).toBe(false);
     const recs = buildRecommendations(makeContext({ tracks: [broken] }));
     expect(recs.some((r) => r.id === `rights:${t.id}`)).toBe(true);
+  });
+
+  it("treats released catalog tracks as done, not as upcoming work", () => {
+    const old = makeTrack({ id: "old", status: "Released" });
+    const next = makeTrack({ id: "next", status: "Finished" });
+    const ctx = makeContext({ tracks: [old, next] });
+    expect(tracksForRelease(ctx).map((t) => t.id)).toEqual(["next"]);
+    expect(activeTracks(ctx)).toHaveLength(0);
+    const recs = buildRecommendations(ctx);
+    expect(recs.some((r) => r.id === "rights:old")).toBe(false);
+    expect(recs.some((r) => r.id === "rights:next")).toBe(true);
   });
 
   it("surfaces overdue tasks with the reason", () => {

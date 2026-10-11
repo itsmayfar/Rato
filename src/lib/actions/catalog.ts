@@ -49,7 +49,7 @@ function trackTemplateTasks(trackId: string, title: string, status: string) {
   const early = ["Idea", "Demo", "In production", "Arrangement", "Recording"].includes(status);
   const list = [
     early && { key: "produce", title: `Develop “${title}” to a finished mix`, phaseKey: "production", priority: "medium" },
-    status !== "Finished" && { key: "master", title: `Get an approved master for “${title}”`, phaseKey: "production", priority: "medium" },
+    status !== "Finished" && status !== "Released" && { key: "master", title: `Get an approved master for “${title}”`, phaseKey: "production", priority: "medium" },
     { key: "credits", title: `Document credits and collaborators for “${title}”`, phaseKey: "rights", priority: "medium" },
     { key: "splits", title: `Record composition and master ownership for “${title}”`, phaseKey: "rights", priority: "high", completionCriteria: "Both split types total 100% and are confirmed." },
     status === "Finished" && { key: "release", title: `Plan a release for “${title}”`, phaseKey: "release", priority: "medium" },
@@ -81,7 +81,7 @@ export async function createTrack(_: ActionState, form: FormData): Promise<Actio
   }
   const [row] = await db
     .insert(tracks)
-    .values({ ...values, userId: user.id, projectCode, workflowStage: values.status === "Finished" ? "Rights Review" : values.status === "Idea" ? "Idea" : "Production" })
+    .values({ ...values, userId: user.id, projectCode, workflowStage: values.status === "Released" ? "Performance Review" : values.status === "Finished" ? "Rights Review" : values.status === "Idea" ? "Idea" : "Production" })
     .returning({ id: tracks.id });
   await db.insert(rightsRecords).values({ userId: user.id, trackId: row.id });
   await insertGeneratedTasks(user.id, trackTemplateTasks(row.id, values.title, values.status));

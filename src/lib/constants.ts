@@ -10,6 +10,7 @@ export const DEFAULT_BRAND = {
 export const CAREER_STAGES = ["Emerging", "Developing", "Established", "Professional", "Veteran"] as const;
 
 export const GENRES = [
+  "Melodic House",
   "Melodic Techno",
   "Techno",
   "Progressive House",
@@ -43,6 +44,7 @@ export const TRACK_STATUSES = [
   "Mastering",
   "Review",
   "Finished",
+  "Released",
   "Archived",
 ];
 

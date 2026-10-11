@@ -9,7 +9,7 @@ import { GROUP_LABELS, ONBOARDING_STEPS } from "./info/registry";
 import { effectiveChecklist } from "./releases/checklist";
 import type { BusinessContext, Task } from "./types";
 import { addDays, daysBetween, formatDate } from "./utils";
-import { recommendedPhase, tracksForRelease, upcomingReleases } from "./workflow/phases";
+import { isReleasedTrack, recommendedPhase, tracksForRelease, upcomingReleases } from "./workflow/phases";
 
 export interface Recommendation {
   id: string;
@@ -145,7 +145,7 @@ export function buildRecommendations(ctx: BusinessContext, limit = 5): Recommend
   }
 
   // 5. Finished tracks without a release
-  const finishedUnreleased = ctx.tracks.filter((t) => t.status === "Finished" && !t.releaseIds.length && !t.actualReleaseDate);
+  const finishedUnreleased = ctx.tracks.filter((t) => t.status === "Finished" && !t.releaseIds.length && !isReleasedTrack(t));
   if (finishedUnreleased.length) {
     recs.push({
       id: "create-release",
