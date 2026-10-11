@@ -1,7 +1,7 @@
 /** Domain vocabularies. Status lists can be extended per user (Settings → Workflow). */
 
 export const DEFAULT_BRAND = {
-  artistName: "MayFar",
+  artistName: "Mayfar",
   brandConcept: "Dark Emotion",
   brandPhrase: "Sound becomes feeling.",
   visualIdentity: "Black, red and white",

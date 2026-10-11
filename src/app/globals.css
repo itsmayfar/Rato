@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* MayFar design tokens — Dark Emotion. Dark is the default theme. */
+/* Mayfar design tokens — Dark Emotion. Dark is the default theme. */
 :root {
   --bg: #000000;
   --surface: #0b0b0d;

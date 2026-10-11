@@ -16,18 +16,18 @@ export async function seedDemoData(userId: string) {
   const existing = await db.select({ id: s.tracks.id }).from(s.tracks).where(and(eq(s.tracks.userId, userId), eq(s.tracks.isDemo, true)));
   if (existing.length) return false;
 
-  const [t1] = await db.insert(s.tracks).values({ userId, isDemo: true, projectCode: "DEMO-001", title: `${D}Afterglow`, primaryArtist: "MayFar", genre: "Melodic Techno", bpm: 123, musicalKey: "F minor", mood: "Melancholic, driving", language: "Instrumental", durationSec: 402, explicit: "no", status: "Finished", workflowStage: "Rights Review", hasCollaborators: "yes" }).returning({ id: s.tracks.id });
-  const [t2] = await db.insert(s.tracks).values({ userId, isDemo: true, projectCode: "DEMO-002", title: `${D}Glass Heart`, primaryArtist: "MayFar", genre: "Progressive House", bpm: 122, status: "Mixing", workflowStage: "Mixing", explicit: "unknown", hasCollaborators: "unknown" }).returning({ id: s.tracks.id });
+  const [t1] = await db.insert(s.tracks).values({ userId, isDemo: true, projectCode: "DEMO-001", title: `${D}Afterglow`, primaryArtist: "Mayfar", genre: "Melodic Techno", bpm: 123, musicalKey: "F minor", mood: "Melancholic, driving", language: "Instrumental", durationSec: 402, explicit: "no", status: "Finished", workflowStage: "Rights Review", hasCollaborators: "yes" }).returning({ id: s.tracks.id });
+  const [t2] = await db.insert(s.tracks).values({ userId, isDemo: true, projectCode: "DEMO-002", title: `${D}Glass Heart`, primaryArtist: "Mayfar", genre: "Progressive House", bpm: 122, status: "Mixing", workflowStage: "Mixing", explicit: "unknown", hasCollaborators: "unknown" }).returning({ id: s.tracks.id });
   await db.insert(s.rightsRecords).values([{ userId, trackId: t1.id, samplesUsed: "none", sampleLicenseStatus: "not_needed", agreementStatus: "sent" }, { userId, trackId: t2.id }]);
   await db.insert(s.trackVersions).values({ userId, trackId: t1.id, kind: "master", label: "Master v2 (demo)", externalUrl: "https://example.com/demo-master", approved: true, approvedAt: new Date() });
   await db.insert(s.trackCollaborators).values({ userId, trackId: t1.id, name: "Demo Vocalist", role: "Vocalist", credited: true });
   await db.insert(s.ownershipSplits).values([
-    { userId, trackId: t1.id, rightType: "composition", holderName: "MayFar (demo)", percentage: 70, confirmed: true },
+    { userId, trackId: t1.id, rightType: "composition", holderName: "Mayfar (demo)", percentage: 70, confirmed: true },
     { userId, trackId: t1.id, rightType: "composition", holderName: "Demo Vocalist", percentage: 30, confirmed: false },
-    { userId, trackId: t1.id, rightType: "master", holderName: "MayFar (demo)", percentage: 100, confirmed: true },
+    { userId, trackId: t1.id, rightType: "master", holderName: "Mayfar (demo)", percentage: 100, confirmed: true },
   ]);
   const [project] = await db.insert(s.projects).values({ userId, isDemo: true, name: `${D}Release: Afterglow`, kind: "release", phaseKey: "release", status: "active" }).returning({ id: s.projects.id });
-  const [rel] = await db.insert(s.releases).values({ userId, isDemo: true, title: `${D}Afterglow`, releaseType: "single", primaryArtist: "MayFar", releaseDate: addDays(today, 24), distributor: "DistroKid", genre: "Melodic Techno", language: "Instrumental", explicit: "no", status: "In preparation", preferences: { campaign: true, pitching: true }, projectId: project.id }).returning({ id: s.releases.id });
+  const [rel] = await db.insert(s.releases).values({ userId, isDemo: true, title: `${D}Afterglow`, releaseType: "single", primaryArtist: "Mayfar", releaseDate: addDays(today, 24), distributor: "DistroKid", genre: "Melodic Techno", language: "Instrumental", explicit: "no", status: "In preparation", preferences: { campaign: true, pitching: true }, projectId: project.id }).returning({ id: s.releases.id });
   await db.insert(s.releaseTracks).values({ releaseId: rel.id, trackId: t1.id, position: 1 });
   await syncReleaseChecklist(userId, rel.id);
   const [camp] = await db.insert(s.campaigns).values({ userId, isDemo: true, name: `${D}Afterglow launch`, releaseId: rel.id, trackId: t1.id, template: "pre_release", objective: "Promote a release", targetAudience: "Melodic techno listeners 20–35, Berlin / Amsterdam / Lisbon", budget: 250, startDate: addDays(today, -3), endDate: addDays(today, 40), channels: ["Instagram", "TikTok", "Playlist pitching"], message: "Sound becomes feeling — Afterglow, out soon.", successMetrics: "1,000 pre-saves; 50 playlist adds", status: "Active" }).returning({ id: s.campaigns.id });

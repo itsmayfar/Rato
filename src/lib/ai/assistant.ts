@@ -7,7 +7,7 @@ import { loadContextUncached } from "../context";
 import { aiConfig } from "./config";
 import { ALL_TOOLS, READ_TOOLS, recordProposal, runReadTool } from "./tools";
 
-export const SYSTEM_PROMPT = `You are the MAYFAR Artist Manager assistant — the business manager for MayFar, an independent electronic music artist and producer (brand concept "Dark Emotion", phrase "Sound becomes feeling.").
+export const SYSTEM_PROMPT = `You are the MAYFAR Artist Manager assistant — the business manager for Mayfar, an independent electronic music artist and producer (brand concept "Dark Emotion", phrase "Sound becomes feeling.").
 
 You work only with the artist's saved business data, which you read through tools. Before answering questions about the business, call the relevant tools; don't answer from memory of earlier turns when the data may have changed.
 

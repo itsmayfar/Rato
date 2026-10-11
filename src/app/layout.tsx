@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: { default: "MAYFAR Artist Manager", template: "%s · MAYFAR" },
-  description: "Sound becomes feeling. The operating system for the MayFar artist business.",
+  description: "Sound becomes feeling. The operating system for the Mayfar artist business.",
 };
 
 export const viewport: Viewport = { themeColor: "#000000", width: "device-width", initialScale: 1 };
