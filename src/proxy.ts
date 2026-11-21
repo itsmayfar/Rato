@@ -24,5 +24,6 @@ export function proxy(request: NextRequest) {
 export const config = {
   // Skip static assets and endpoints that authenticate themselves. Uploads must
   // bypass the proxy: it buffers request bodies only up to 10 MB.
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|icon.svg|api/cron|api/upload|api/files).*)"],
+  // The manifest, icons, service worker and offline page are public: phones fetch them without cookies.
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|icon.svg|apple-icon.png|manifest.webmanifest|sw.js|offline.html|icons/|api/cron|api/upload|api/files).*)"],
 };
