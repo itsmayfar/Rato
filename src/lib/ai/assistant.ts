@@ -6,6 +6,7 @@ import { aiUsage } from "../db/schema";
 import { loadContextUncached } from "../context";
 import { aiConfig } from "./config";
 import { managerPlaybook } from "./manager";
+import { AI_PERMISSIONS, allowedKinds } from "./permissions";
 import { ALL_TOOLS, READ_TOOLS, recordProposal, runReadTool } from "./tools";
 
 export const SYSTEM_PROMPT = `You are the MAYFAR Artist Manager assistant — the business manager for Mayfar, an independent electronic music artist and producer (brand concept "Dark Emotion", phrase "Sound becomes feeling.").
@@ -23,8 +24,16 @@ Ground rules:
 
 When helpful, structure answers as: current situation, what is missing, what needs to happen next, why it matters, recommended action, and any approval needed. Keep everyday answers concise and specific; use short lists. Command requests and strategies may be complete. Write in English unless the artist writes in another language. Refer to items by name, not by id.`;
 
-export function systemPrompt(webSearch: boolean): string {
-  return `${SYSTEM_PROMPT}\n\n${managerPlaybook(webSearch)}`;
+/** Tells the model which proposal kinds the artist lets it create directly. */
+export function permissionsNote(perms: Record<string, boolean> | null | undefined): string {
+  const kinds = allowedKinds(perms);
+  if (!kinds.length) return "Every propose_* call needs the artist's approval in the chat.";
+  const labels = AI_PERMISSIONS.filter((p) => kinds.includes(p.kind)).map((p) => p.label.toLowerCase());
+  return `The artist allowed you to create these directly, without asking first: ${labels.join(", ")}. For those, the propose_* tool creates the items immediately (result status "created"). Only create what the artist asked for or clearly agreed to, then say exactly what you created. Everything else still needs approval.`;
+}
+
+export function systemPrompt(webSearch: boolean, perms?: Record<string, boolean> | null): string {
+  return `${SYSTEM_PROMPT}\n\n## Permissions\n${permissionsNote(perms)}\n\n${managerPlaybook(webSearch)}`;
 }
 
 export type ToolLogEntry = { name: string; input: unknown; summary: string };
@@ -89,7 +98,7 @@ export async function runAssistant(
     const response = await client.beta.messages.create({
       model: cfg.model,
       max_tokens: 16000,
-      system: systemPrompt(cfg.webSearch),
+      system: systemPrompt(cfg.webSearch, ctx0.settings.aiPermissions),
       tools: cfg.webSearch ? [...ALL_TOOLS, { type: "web_search_20250305", name: "web_search", max_uses: 5 }] : ALL_TOOLS,
       messages,
       thinking: { type: "adaptive" },
@@ -140,7 +149,8 @@ export async function runAssistant(
         const isError = Boolean(out && typeof out === "object" && "error" in (out as object));
         const json = JSON.stringify(out);
         results.push({ type: "tool_result", tool_use_id: block.id, content: json.length > 40_000 ? `${json.slice(0, 40_000)}…(truncated)` : json, is_error: isError || undefined });
-        toolLog.push({ name: block.name, input, summary: isError ? `error: ${(out as { error: string }).error}` : isReadTool(block.name) ? "read stored data" : "proposal recorded (pending approval)" });
+        const created = (out as { status?: string } | null)?.status === "created";
+        toolLog.push({ name: block.name, input, summary: isError ? `error: ${(out as { error: string }).error}` : isReadTool(block.name) ? "read stored data" : created ? "created (allowed in Settings → AI)" : "proposal recorded (pending approval)" });
       } catch (err) {
         results.push({ type: "tool_result", tool_use_id: block.id, content: `Tool failed: ${(err as Error).message}`, is_error: true });
         toolLog.push({ name: block.name, input, summary: "failed" });

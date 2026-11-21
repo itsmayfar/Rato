@@ -123,6 +123,7 @@ export function makeContext(over: Partial<BusinessContext> = {}): BusinessContex
       notificationPrefs: {},
       customStatuses: {},
       trackWorkflow: [],
+      aiPermissions: {},
       updatedAt: now,
     },
     profile: {

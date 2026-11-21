@@ -116,7 +116,7 @@ export default async function AssistantPage({ searchParams }: { searchParams: Pr
                       <div key={p.id} className="mt-3 rounded-md border border-accent/40 bg-accent-soft/40 p-3">
                         <div className="flex flex-wrap items-center justify-between gap-2">
                           <div className="text-sm"><Badge tone="accent">{KIND_LABEL[p.kind] ?? p.kind}</Badge> <span className="ml-1">{p.summary}</span></div>
-                          <Badge tone={p.status === "approved" ? "success" : p.status === "pending" ? "warning" : p.status === "failed" ? "danger" : "inactive"}>{p.status}</Badge>
+                          <Badge tone={p.status === "approved" || p.status === "auto_approved" ? "success" : p.status === "pending" ? "warning" : p.status === "failed" ? "danger" : "inactive"}>{p.status === "auto_approved" ? "created (allowed)" : p.status}</Badge>
                         </div>
                         <ProposalDetails kind={p.kind} payload={p.payload} />
                         {p.status === "pending" ? (

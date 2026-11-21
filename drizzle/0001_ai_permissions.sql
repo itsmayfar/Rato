@@ -1,0 +1,1 @@
+ALTER TABLE "user_settings" ADD COLUMN "ai_permissions" jsonb DEFAULT '{}'::jsonb NOT NULL;

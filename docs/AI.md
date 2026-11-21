@@ -45,13 +45,17 @@ With `AI_WEB_SEARCH=on` the assistant searches the web before naming labels, pla
 - Adaptive thinking, `effort: medium`, prompt caching, and server-side refusal fallbacks (`AI_REFUSAL_FALLBACK=default`) are enabled. Refusals and errors are handled and shown as plain messages; usage and errors are recorded per day.
 - The system prompt forbids inventing data, claiming external actions, and giving legal/tax advice, and asks for the *current situation → what’s missing → next step → why → recommended action → approval* structure.
 
+## Assistant permissions
+
+**Settings → AI → Assistant permissions** lets the artist choose what the assistant may create without asking: tasks, content drafts, outreach drafts, campaigns, releases, and saving information given in the chat. Ticked kinds are created immediately through the same validation as a manual approval (`src/lib/ai/permissions.ts`, `recordProposal` in `src/lib/ai/tools.ts`), logged in the audit log and shown in the chat as “created (allowed)”. Unticked kinds stay pending proposals. Everything is off by default. Spending money, approving ads, publishing, sending, legal names, ownership splits and financial records are never on the list.
+
 ## Guarantees
 
 | The assistant can | The assistant cannot |
 |---|---|
 | Read your saved data (and search the web if `AI_WEB_SEARCH=on`) | Act in external services |
 | Identify missing information and ask for it | Publish, send, spend, register or delete anything |
-| Draft plans, tasks, captions, emails, campaigns | Change data without your approval |
+| Draft plans, tasks, captions, emails, campaigns | Change data without your approval (unless you allowed that kind in Settings → AI) |
 | Save information you told it — after approval | Enter legal names, ownership splits or financial records |
 
 ## Other providers

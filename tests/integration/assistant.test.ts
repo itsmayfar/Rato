@@ -107,6 +107,29 @@ describe.skipIf(!hasDb)("AI assistant tool loop", () => {
   });
 });
 
+describe.skipIf(!hasDb)("assistant permissions", () => {
+  it("creates allowed kinds directly and keeps everything else as a proposal", async () => {
+    const { recordProposal } = await import("@/lib/ai/tools");
+    const { loadContextUncached } = await import("@/lib/context");
+    const uid = await createUser();
+    const [conv] = await db.insert(s.aiConversations).values({ userId: uid }).returning();
+    await db.update(s.userSettings).set({ aiPermissions: { create_tasks: true } }).where(eq(s.userSettings.userId, uid));
+    const ctx = await loadContextUncached(uid);
+
+    const created = (await recordProposal(ctx, conv.id, "propose_tasks", { summary: "Plan", tasks: [{ title: "Book studio time", priority: "high" }] })) as { status: string };
+    expect(created.status).toBe("created");
+    expect(await db.select().from(s.tasks).where(eq(s.tasks.userId, uid))).toHaveLength(1);
+
+    const pending = (await recordProposal(ctx, conv.id, "propose_content", { summary: "Posts", items: [{ title: "Teaser" }] })) as { status: string };
+    expect(pending.status).toBe("pending_approval");
+    expect(await db.select().from(s.contentItems).where(eq(s.contentItems.userId, uid))).toHaveLength(0);
+
+    const rows = await db.select().from(s.aiProposedActions).where(eq(s.aiProposedActions.userId, uid));
+    expect(rows.map((r) => r.status).sort()).toEqual(["auto_approved", "pending"]);
+    await db.delete(s.users).where(eq(s.users.id, uid));
+  });
+});
+
 describe("offline assistant", () => {
   it("answers from stored data only", async () => {
     const { offlineAnswer } = await import("@/lib/ai/offline");

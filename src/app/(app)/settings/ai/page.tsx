@@ -1,5 +1,9 @@
 import { desc, eq } from "drizzle-orm";
+import { ActionForm, SubmitButton } from "@/components/ui/form";
 import { Badge, Card, CardHeader, KeyValue, Notice, PageHeader, Table, Td, Th } from "@/components/ui/primitives";
+import { saveAiPermissions } from "@/lib/actions/settings";
+import { AI_PERMISSIONS } from "@/lib/ai/permissions";
+import { getSettings } from "@/lib/context";
 import { aiConfig } from "@/lib/ai/config";
 import { requireUser } from "@/lib/auth";
 import { db } from "@/lib/db";
@@ -11,6 +15,8 @@ export const metadata = { title: "AI settings" };
 export default async function AiSettingsPage() {
   const user = await requireUser();
   const cfg = aiConfig();
+  const settings = await getSettings(user.id);
+  const perms = settings.aiPermissions ?? {};
   const usage = await db.select().from(aiUsage).where(eq(aiUsage.userId, user.id)).orderBy(desc(aiUsage.day)).limit(30);
   const tin = usage.reduce((s, u) => s + u.inputTokens, 0);
   const tout = usage.reduce((s, u) => s + u.outputTokens, 0);
@@ -32,6 +38,30 @@ export default async function AiSettingsPage() {
         <Notice className="mt-6" title="How to configure">
           Set <code>ANTHROPIC_API_KEY</code> (and optionally <code>AI_MODEL</code>, <code>AI_DAILY_REQUEST_LIMIT</code>) in the server environment and restart. Without a key, every standard workflow, checklist and form keeps working and the assistant answers from stored data.
         </Notice>
+      </Card>
+      <Card>
+        <CardHeader
+          title="Assistant permissions"
+          description="Choose what the assistant may create on its own. Anything not ticked is shown as a proposal for you to approve in the chat."
+          action={<Badge tone={AI_PERMISSIONS.some((p) => perms[p.kind]) ? "accent" : "inactive"}>{AI_PERMISSIONS.filter((p) => perms[p.kind]).length} of {AI_PERMISSIONS.length} allowed</Badge>}
+        />
+        <ActionForm action={saveAiPermissions}>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {AI_PERMISSIONS.map((p) => (
+              <label key={p.kind} className="flex items-start gap-3 rounded-md border border-line p-3 text-sm hover:border-accent/50">
+                <input type="checkbox" name={`perm_${p.kind}`} defaultChecked={perms[p.kind] === true} className="mt-0.5 accent-[var(--accent)]" />
+                <span>
+                  <span className="block text-fg">{p.label}</span>
+                  <span className="block text-xs text-muted">{p.help}</span>
+                </span>
+              </label>
+            ))}
+          </div>
+          <Notice className="mt-4" title="Always needs you">
+            Spending money, approving ads, publishing posts, sending messages, entering your legal name, ownership splits and financial records. Everything the assistant creates is logged and labelled in the chat.
+          </Notice>
+          <SubmitButton className="mt-4">Save permissions</SubmitButton>
+        </ActionForm>
       </Card>
       <Card>
         <CardHeader title="Usage (last 30 days)" description={cost !== null ? `Estimated cost ${formatMoney(cost, "USD")} at the configured per-token prices (estimate).` : "Set AI_PRICE_INPUT_PER_MTOK / AI_PRICE_OUTPUT_PER_MTOK for a cost estimate."} />

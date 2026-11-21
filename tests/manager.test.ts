@@ -29,3 +29,13 @@ describe("artist-manager playbook", () => {
     expect(offlineAnswer(ctx, "/labels")).toMatch(/offline mode/);
   });
 });
+
+describe("assistant permissions", () => {
+  it("only auto-creates kinds the artist ticked", async () => {
+    const { canAutoCreate, allowedKinds } = await import("@/lib/ai/permissions");
+    expect(canAutoCreate({}, "create_tasks")).toBe(false);
+    expect(canAutoCreate({ create_tasks: true }, "create_tasks")).toBe(true);
+    expect(canAutoCreate({ spend_money: true }, "spend_money")).toBe(false);
+    expect(allowedKinds({ create_tasks: true, save_info: false })).toEqual(["create_tasks"]);
+  });
+});

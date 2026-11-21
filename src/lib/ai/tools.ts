@@ -3,6 +3,9 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { and, desc, eq } from "drizzle-orm";
 import { db } from "../db";
 import { aiProposedActions, analyticsRecords } from "../db/schema";
+import { audit } from "../audit";
+import { applyProposal } from "./apply";
+import { canAutoCreate } from "./permissions";
 import { OPEN_TASK_STATUSES } from "../constants";
 import { monthRange, previousMonth, summarizePeriod } from "../finance";
 import { evaluateAll, evaluateCampaign, evaluateProfile, evaluateRelease, evaluateTrack, summarize, type InfoItem } from "../info/engine";
@@ -357,7 +360,19 @@ export async function recordProposal(ctx: BusinessContext, conversationId: strin
     .insert(aiProposedActions)
     .values({ userId: ctx.userId, conversationId, kind, summary: String(input.summary ?? name).slice(0, 300), payload: input, status: "pending" })
     .returning({ id: aiProposedActions.id });
-  return { status: "pending_approval", proposal_id: row.id, note: "Recorded as a proposal. Nothing has been created or changed. The artist must approve it in the chat." };
+  if (!canAutoCreate(ctx.settings.aiPermissions, kind)) {
+    return { status: "pending_approval", proposal_id: row.id, note: "Recorded as a proposal. Nothing has been created or changed. The artist must approve it in the chat." };
+  }
+  // The artist allowed this kind in Settings → AI: create it now, with the same validation as a manual approval.
+  try {
+    const result = await applyProposal(ctx.userId, row.id, kind, input);
+    await db.update(aiProposedActions).set({ status: "auto_approved", decidedAt: new Date(), resultNote: result }).where(eq(aiProposedActions.id, row.id));
+    await audit(ctx.userId, "assistant.auto_create", "ai_proposal", row.id, `${kind}: ${String(input.summary ?? name).slice(0, 200)}`);
+    return { status: "created", proposal_id: row.id, result: result.split("|")[0], note: "Created directly — the artist allowed the assistant to create this kind of item without asking. Tell them what you created." };
+  } catch (err) {
+    await db.update(aiProposedActions).set({ status: "failed", decidedAt: new Date(), resultNote: (err as Error).message.slice(0, 300) }).where(eq(aiProposedActions.id, row.id));
+    return { error: `Could not create it: ${(err as Error).message}` };
+  }
 }
 
 export { profileView };

@@ -63,7 +63,8 @@ export async function sendAssistantMessage(_: ActionState, form: FormData): Prom
     await db.insert(aiMessages).values({ userId: user.id, conversationId, role: "assistant", content: `⚠ ${describeAiError(err)}`, mode: "offline" });
   }
   await db.update(aiConversations).set({ updatedAt: new Date() }).where(eq(aiConversations.id, conversationId));
-  revalidatePath("/assistant");
+  // items the assistant was allowed to create directly show up across the app
+  revalidatePath("/", "layout");
   return ok(undefined, { conversationId });
 }
 

@@ -80,6 +80,8 @@ export const userSettings = pgTable("user_settings", {
   customStatuses: jsonb("custom_statuses").$type<Record<string, string[]>>().notNull().default({}),
   /** Custom track workflow stages (ordered). Empty = default workflow. */
   trackWorkflow: jsonb("track_workflow").$type<string[]>().notNull().default([]),
+  /** What the AI assistant may create without asking first, e.g. { create_tasks: true }. Empty = always ask. */
+  aiPermissions: jsonb("ai_permissions").$type<Record<string, boolean>>().notNull().default({}),
   updatedAt: updatedAt(),
 });
 

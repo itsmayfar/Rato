@@ -13,6 +13,7 @@ import { aiConversations, analyticsRecords, notifications, sessions, tasks, user
 import { removeDemoData, seedDemoData } from "@/lib/demo";
 import { parseForm } from "@/lib/fields";
 import { SETTINGS_FIELDS } from "@/lib/forms";
+import { AI_PERMISSIONS } from "@/lib/ai/permissions";
 import { removeObject } from "@/lib/storage";
 import { documents } from "@/lib/db/schema";
 
@@ -140,3 +141,14 @@ export async function deleteAccount(_: ActionState, form: FormData): Promise<Act
   redirect("/signup");
 }
 
+
+export async function saveAiPermissions(_: ActionState, form: FormData): Promise<ActionState> {
+  const user = await requireUser();
+  const perms: Record<string, boolean> = {};
+  for (const p of AI_PERMISSIONS) perms[p.kind] = form.get(`perm_${p.kind}`) === "on";
+  await db.update(userSettings).set({ aiPermissions: perms }).where(eq(userSettings.userId, user.id));
+  const on = AI_PERMISSIONS.filter((p) => perms[p.kind]).map((p) => p.label);
+  await audit(user.id, "settings.ai_permissions", "settings", null, on.length ? `Assistant may create: ${on.join(", ")}` : "Assistant asks before creating anything");
+  revalidatePath("/settings/ai");
+  return ok(on.length ? "Saved. The assistant can now create these without asking." : "Saved. The assistant will ask before creating anything.");
+}
