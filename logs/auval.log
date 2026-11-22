@@ -1,0 +1,1074 @@
+
+    AU Validation Tool
+    Version: 1.10.0 
+    Copyright 2003-2019, Apple Inc. All Rights Reserved.
+    Specify -h (-help) for command options
+
+--------------------------------------------------
+VALIDATING AUDIO UNIT: 'aumu' - 'Rato' - 'Myfr'
+--------------------------------------------------
+Manufacturer String: MAYFAR
+AudioUnit Name: RATO
+Component Version: 1.1.0 (0x10100)
+
+* * PASS
+--------------------------------------------------
+TESTING OPEN TIMES:
+COLD:
+Time to open AudioUnit:         47.470 ms
+WARM:
+Time to open AudioUnit:         8.431  ms
+This AudioUnit is a version 2 implementation.
+FIRST TIME:
+Time for initialization:        0.040 ms
+
+* * PASS
+--------------------------------------------------
+VERIFYING DEFAULT SCOPE FORMATS:
+Input Scope Bus Configuration:
+ Default Bus Count:0
+
+Output Scope Bus Configuration:
+ Default Bus Count:1
+    Bus Name: Output
+    Default Format: AudioStreamBasicDescription:  2 ch,  44100 Hz, Float32, deinterleaved
+    Has Channel Layouts: 0x640001 0x650002 0x660002 0x670002 0x6A0002 
+    Default Layout:
+	Tag=0x650002, Num Chan Descs=0
+
+* * PASS
+--------------------------------------------------
+VERIFYING REQUIRED PROPERTIES:
+
+* * PASS
+--------------------------------------------------
+VERIFYING RECOMMENDED PROPERTIES:
+  VERIFYING PROPERTY: Latency
+    PASS
+
+* * PASS
+--------------------------------------------------
+VERIFYING OPTIONAL PROPERTIES:
+  VERIFYING PROPERTY: Tail Time
+    PASS
+  VERIFYING PROPERTY: Bypass Effect
+    PASS
+
+* * PASS
+--------------------------------------------------
+VERIFYING SPECIAL PROPERTIES:
+
+VERIFYING CUSTOM UI
+Cocoa Views Available: 1
+  JUCE_AUCocoaViewClass_bfde8304f3c95232
+    PASS
+
+HAS FACTORY PRESETS
+    ID:   0    Name: EMO Late Distant
+    ID:   1    Name: EMO Bright Paper Hearts
+    ID:   2    Name: EMO Pure Promise
+    ID:   3    Name: EMO Velvet Tears
+    ID:   4    Name: EMO Late Memories
+    ID:   5    Name: EMO Warm Silhouette
+    ID:   6    Name: EMO Quiet Distant
+    ID:   7    Name: EMO Fragile Silhouette
+    ID:   8    Name: EMO Pure Heartline
+    ID:   9    Name: EMO Velvet Fade Away
+    ID:  10    Name: EMO Pure Home
+    ID:  11    Name: EMO Endless Echoes
+    ID:  12    Name: EMO Bright Lost Love
+    ID:  13    Name: EMO Soft Waves
+    ID:  14    Name: EMO Endless Last Dance
+    ID:  15    Name: EMO Velvet Distant
+    ID:  16    Name: EMO Bright Last Dance
+    ID:  17    Name: EMO Endless Memories
+    ID:  18    Name: EMO Quiet Memories
+    ID:  19    Name: EMO Fragile Paper Hearts
+    ID:  20    Name: EMO Bright Golden Hour
+    ID:  21    Name: EMO Endless Waves
+    ID:  22    Name: EMO Velvet Heartline
+    ID:  23    Name: EMO Velvet Waves
+    ID:  24    Name: EMO Pure Tears
+    ID:  25    Name: EMO Bright Heartline
+    ID:  26    Name: EMO Warm Promise
+    ID:  27    Name: EMO Bright Distant
+    ID:  28    Name: EMO Late Home
+    ID:  29    Name: EMO Warm Last Dance
+    ID:  30    Name: EMO Warm Heartline
+    ID:  31    Name: EMO Quiet Skyline
+    ID:  32    Name: EMO Warm Distant
+    ID:  33    Name: EMO Late Silhouette
+    ID:  34    Name: EMO Endless Home
+    ID:  35    Name: EMO Velvet Silhouette
+    ID:  36    Name: EMO Late Sunrise
+    ID:  37    Name: EMO Endless Distant
+    ID:  38    Name: EMO Bright Echoes
+    ID:  39    Name: EMO Late Promise
+    ID:  40    Name: EMO Pure Northern Sky
+    ID:  41    Name: EMO Broken Distant
+    ID:  42    Name: EMO Endless Fade Away
+    ID:  43    Name: EMO Quiet Waves
+    ID:  44    Name: EMO Broken Gravity
+    ID:  45    Name: EMO Broken Echoes
+    ID:  46    Name: EMO Fragile Gravity
+    ID:  47    Name: EMO Soft Echoes
+    ID:  48    Name: EMO Soft Fade Away
+    ID:  49    Name: EMO Fragile Golden Hour
+    ID:  50    Name: EMO Broken Golden Hour
+    ID:  51    Name: EMO Velvet Lost Love
+    ID:  52    Name: EMO Velvet Home
+    ID:  53    Name: EMO Velvet Northern Sky
+    ID:  54    Name: EMO Pure Silhouette
+    ID:  55    Name: EMO Pure Last Dance
+    ID:  56    Name: EMO Velvet Skyline
+    ID:  57    Name: EMO Late Echoes
+    ID:  58    Name: EMO Quiet Gravity
+    ID:  59    Name: EMO Quiet Tears
+    ID:  60    Name: DH Smooth Soul
+    ID:  61    Name: DH Dusty Low End
+    ID:  62    Name: DH Hazy Midnight
+    ID:  63    Name: DH Late Lounge
+    ID:  64    Name: DH Rolling Drift
+    ID:  65    Name: DH Dark Shadow
+    ID:  66    Name: DH Deep Shadow
+    ID:  67    Name: DH Late Pulse
+    ID:  68    Name: DH Hazy Tape
+    ID:  69    Name: DH Hazy Pulse
+    ID:  70    Name: DH Warm Velvet
+    ID:  71    Name: DH Rolling Club
+    ID:  72    Name: DH Muted Club
+    ID:  73    Name: DH Dark Vinyl
+    ID:  74    Name: DH Subtle Glow
+    ID:  75    Name: DH Rolling Soul
+    ID:  76    Name: DH Rolling Lounge
+    ID:  77    Name: DH Smooth Lounge
+    ID:  78    Name: DH Deep Midnight
+    ID:  79    Name: DH Muted Vinyl
+    ID:  80    Name: DH Rolling Basement
+    ID:  81    Name: DH Warm Tape
+    ID:  82    Name: DH Hazy Heat
+    ID:  83    Name: DH Subtle Club
+    ID:  84    Name: DH Late Night Drive
+    ID:  85    Name: DH Muted Velvet
+    ID:  86    Name: DH Smooth Rhodes
+    ID:  87    Name: DH Warm Lounge
+    ID:  88    Name: DH Smooth Drift
+    ID:  89    Name: DH Rolling Tape
+    ID:  90    Name: DH Rolling Shadow
+    ID:  91    Name: DH Smooth Basement
+    ID:  92    Name: DH Late Midnight
+    ID:  93    Name: DH Warm Night Drive
+    ID:  94    Name: DH Dark Low End
+    ID:  95    Name: DH Rolling Glow
+    ID:  96    Name: DH Muted Groove
+    ID:  97    Name: DH Warm Low End
+    ID:  98    Name: DH Late Low End
+    ID:  99    Name: DH Muted Midnight
+    ID: 100    Name: DH Warm Midnight
+    ID: 101    Name: DH Hazy Dusk
+    ID: 102    Name: DH Subtle Groove
+    ID: 103    Name: DH Muted Glow
+    ID: 104    Name: DH Subtle Smoke
+    ID: 105    Name: DH Subtle Midnight
+    ID: 106    Name: DH Subtle Heat
+    ID: 107    Name: DH Dark Basement
+    ID: 108    Name: DH Dark Groove
+    ID: 109    Name: DH Smooth Tape
+    ID: 110    Name: DH Muted Dusk
+    ID: 111    Name: DH Warm Glow
+    ID: 112    Name: DH Dark Soul
+    ID: 113    Name: DH Deep Dusk
+    ID: 114    Name: DH Dusty Vinyl
+    ID: 115    Name: DH Smooth Club
+    ID: 116    Name: DH Hazy Basement
+    ID: 117    Name: DH Late Rhodes
+    ID: 118    Name: DH Hazy Drift
+    ID: 119    Name: DH Smooth Glow
+    ID: 120    Name: EDM Neon Rise
+    ID: 121    Name: EDM Hyper Impact
+    ID: 122    Name: EDM Big Rise
+    ID: 123    Name: EDM Ultra Impact
+    ID: 124    Name: EDM Epic Blast
+    ID: 125    Name: EDM Big Anthem
+    ID: 126    Name: EDM Wide Rise
+    ID: 127    Name: EDM Epic Firework
+    ID: 128    Name: EDM Mega Drop
+    ID: 129    Name: EDM Loud Euphoria
+    ID: 130    Name: EDM Epic Main Stage
+    ID: 131    Name: EDM Loud Stadium
+    ID: 132    Name: EDM Massive Stadium
+    ID: 133    Name: EDM Big Festival
+    ID: 134    Name: EDM Power Main Stage
+    ID: 135    Name: EDM Epic Festival
+    ID: 136    Name: EDM Mega Euphoria
+    ID: 137    Name: EDM Mega Energy
+    ID: 138    Name: EDM Massive Firework
+    ID: 139    Name: EDM Power Stadium
+    ID: 140    Name: EDM Neon Firework
+    ID: 141    Name: EDM Loud Rise
+    ID: 142    Name: EDM Wide Euphoria
+    ID: 143    Name: EDM Hyper Energy
+    ID: 144    Name: EDM Epic Supersaw
+    ID: 145    Name: EDM Loud Rush
+    ID: 146    Name: EDM Mega Anthem
+    ID: 147    Name: EDM Neon Supersaw
+    ID: 148    Name: EDM Loud Blast
+    ID: 149    Name: EDM Big Stadium
+    ID: 150    Name: EDM Massive Anthem
+    ID: 151    Name: EDM Ultra Stadium
+    ID: 152    Name: EDM Neon Drop
+    ID: 153    Name: EDM Power Rush
+    ID: 154    Name: EDM Power Supersaw
+    ID: 155    Name: EDM Loud Festival
+    ID: 156    Name: EDM Wide Blast
+    ID: 157    Name: EDM Epic Laser
+    ID: 158    Name: EDM Epic Energy
+    ID: 159    Name: EDM Hyper Blast
+    ID: 160    Name: EDM Ultra Drop
+    ID: 161    Name: EDM Hyper Rise
+    ID: 162    Name: EDM Ultra Anthem
+    ID: 163    Name: EDM Loud Drop
+    ID: 164    Name: EDM Wide Energy
+    ID: 165    Name: EDM Hyper Hands Up
+    ID: 166    Name: EDM Ultra Firework
+    ID: 167    Name: EDM Wide Impact
+    ID: 168    Name: EDM Mega Main Stage
+    ID: 169    Name: EDM Hyper Drop
+    ID: 170    Name: BS Rubber Roller
+    ID: 171    Name: BS Clean Fat
+    ID: 172    Name: BS Heavy Acid
+    ID: 173    Name: BS Heavy Wobble
+    ID: 174    Name: BS Round Pluck Bass
+    ID: 175    Name: BS Punchy Roller
+    ID: 176    Name: BS Deep Thump
+    ID: 177    Name: BS Rubber Grit
+    ID: 178    Name: BS Rubber Acid
+    ID: 179    Name: BS Tight Growl
+    ID: 180    Name: BS Warm Bounce
+    ID: 181    Name: BS Round Saw Bass
+    ID: 182    Name: BS Dirty Acid
+    ID: 183    Name: BS Round Bounce
+    ID: 184    Name: BS Round Fat
+    ID: 185    Name: BS Round Reese
+    ID: 186    Name: BS Gritty Bounce
+    ID: 187    Name: BS Deep Saw Bass
+    ID: 188    Name: BS Clean Grit
+    ID: 189    Name: BS Warm Grit
+    ID: 190    Name: BS Deep Wobble
+    ID: 191    Name: BS Punchy Growl
+    ID: 192    Name: BS Punchy Sub
+    ID: 193    Name: BS Deep Fat
+    ID: 194    Name: BS Heavy Sub
+    ID: 195    Name: BS Tight Reese
+    ID: 196    Name: BS Gritty Pluck Bass
+    ID: 197    Name: BS Deep Sub
+    ID: 198    Name: BS Warm Fat
+    ID: 199    Name: BS Warm Donk
+    ID: 200    Name: BS Gritty Low Line
+    ID: 201    Name: BS Punchy Acid
+    ID: 202    Name: BS Heavy Roller
+    ID: 203    Name: BS Heavy Low Line
+    ID: 204    Name: BS Tight Rumble
+    ID: 205    Name: BS Deep Acid
+    ID: 206    Name: BS Dirty Low Line
+    ID: 207    Name: BS Rubber Wobble
+    ID: 208    Name: BS Deep Pluck Bass
+    ID: 209    Name: BS Deep Donk
+    ID: 210    Name: BS Dirty Growl
+    ID: 211    Name: BS Gritty Thump
+    ID: 212    Name: BS Punchy Rumble
+    ID: 213    Name: BS Round Low Line
+    ID: 214    Name: BS Round Wobble
+    ID: 215    Name: BS Punchy Fat
+    ID: 216    Name: BS Warm Low Line
+    ID: 217    Name: BS Round Rumble
+    ID: 218    Name: BS Punchy Thump
+    ID: 219    Name: BS Gritty Fat
+    ID: 220    Name: BS Gritty Grit
+    ID: 221    Name: BS Rubber Donk
+    ID: 222    Name: BS Gritty Sub
+    ID: 223    Name: BS Punchy Grit
+    ID: 224    Name: BS Dirty Pluck Bass
+    ID: 225    Name: BS Gritty Rumble
+    ID: 226    Name: BS Gritty Saw Bass
+    ID: 227    Name: BS Clean Donk
+    ID: 228    Name: BS Heavy Fat
+    ID: 229    Name: BS Deep Roller
+    ID: 230    Name: PL Airy Raindrop
+    ID: 231    Name: PL Tiny Marimba
+    ID: 232    Name: PL Soft Stab
+    ID: 233    Name: PL Woody Drops
+    ID: 234    Name: PL Bright Stab
+    ID: 235    Name: PL Woody Tick
+    ID: 236    Name: PL Shiny Stab
+    ID: 237    Name: PL Soft Bubble
+    ID: 238    Name: PL Bright Kalimba
+    ID: 239    Name: PL Tiny Glass
+    ID: 240    Name: PL Soft Bell
+    ID: 241    Name: PL Glassy Marimba
+    ID: 242    Name: PL Shiny Kalimba
+    ID: 243    Name: PL Tropical Drops
+    ID: 244    Name: PL Airy Pluck
+    ID: 245    Name: PL Airy Pizz
+    ID: 246    Name: PL Airy Marimba
+    ID: 247    Name: PL Short Tick
+    ID: 248    Name: PL Short Stab
+    ID: 249    Name: PL Shiny Pizz
+    ID: 250    Name: PL Short Pluck
+    ID: 251    Name: PL Shiny Pop
+    ID: 252    Name: PL Shiny Crystal
+    ID: 253    Name: PL Shiny Bell
+    ID: 254    Name: PL Short Drops
+    ID: 255    Name: PL Shiny Drops
+    ID: 256    Name: PL Glassy Pizz
+    ID: 257    Name: PL Woody Snap
+    ID: 258    Name: PL Airy Snap
+    ID: 259    Name: PL Soft Crystal
+    ID: 260    Name: PL Short Kalimba
+    ID: 261    Name: PL Tropical Raindrop
+    ID: 262    Name: PL Airy Bell
+    ID: 263    Name: PL Tropical Pluck
+    ID: 264    Name: PL Crisp Pluck
+    ID: 265    Name: PL Tiny Raindrop
+    ID: 266    Name: PL Crisp Kalimba
+    ID: 267    Name: PL Short Crystal
+    ID: 268    Name: PL Shiny Snap
+    ID: 269    Name: PL Tiny Tick
+    ID: 270    Name: PL Airy Bubble
+    ID: 271    Name: PL Woody Glass
+    ID: 272    Name: PL Woody Bubble
+    ID: 273    Name: PL Bright Pluck
+    ID: 274    Name: PL Short Glass
+    ID: 275    Name: PL Soft Pop
+    ID: 276    Name: PL Woody Kalimba
+    ID: 277    Name: PL Soft Drops
+    ID: 278    Name: PL Tropical Bubble
+    ID: 279    Name: PL Short Bell
+    ID: 280    Name: FX Wide Riser
+    ID: 281    Name: FX Wide Laser Zap
+    ID: 282    Name: FX Falling Space
+    ID: 283    Name: FX Rising Siren
+    ID: 284    Name: FX Cosmic Downlifter
+    ID: 285    Name: FX Cosmic Glitch
+    ID: 286    Name: FX Cosmic Alarm
+    ID: 287    Name: FX Cosmic Riser
+    ID: 288    Name: FX Long Riser
+    ID: 289    Name: FX Huge Wind
+    ID: 290    Name: FX Cosmic White Out
+    ID: 291    Name: FX Long Glitch
+    ID: 292    Name: FX Long Laser Zap
+    ID: 293    Name: FX Wide Reverse
+    ID: 294    Name: FX Huge Reverse
+    ID: 295    Name: FX Long Reverse
+    ID: 296    Name: FX Rising Noise Wash
+    ID: 297    Name: FX Airy White Out
+    ID: 298    Name: FX Falling Impact
+    ID: 299    Name: FX Metallic Downlifter
+    ID: 300    Name: FX Rising White Out
+    ID: 301    Name: FX Strange Riser
+    ID: 302    Name: FX Metallic Impact
+    ID: 303    Name: FX Rising Riser
+    ID: 304    Name: FX Huge Riser
+    ID: 305    Name: FX Huge Downlifter
+    ID: 306    Name: FX Wide White Out
+    ID: 307    Name: FX Metallic Siren
+    ID: 308    Name: FX Strange Space
+    ID: 309    Name: FX Strange Sci-Fi
+    ID: 310    Name: FX Wide Downlifter
+    ID: 311    Name: FX Rising Glitch
+    ID: 312    Name: FX Airy Alarm
+    ID: 313    Name: FX Huge Noise Wash
+    ID: 314    Name: FX Huge Space
+    ID: 315    Name: FX Airy Riser
+    ID: 316    Name: FX Airy Siren
+    ID: 317    Name: FX Falling Noise Wash
+    ID: 318    Name: FX Metallic Sweep
+    ID: 319    Name: FX Metallic Glitch
+    ID: 320    Name: BR Bold Blare
+    ID: 321    Name: BR Bold Hit
+    ID: 322    Name: BR Bold Fanfare
+    ID: 323    Name: BR Smooth Funk Horns
+    ID: 324    Name: BR Soft Trumpet
+    ID: 325    Name: BR Warm Blare
+    ID: 326    Name: BR Epic Hit
+    ID: 327    Name: BR Soft Stab
+    ID: 328    Name: BR Punchy Fanfare
+    ID: 329    Name: BR Warm Section
+    ID: 330    Name: BR Bright Horns
+    ID: 331    Name: BR Punchy Blare
+    ID: 332    Name: BR Funky Section
+    ID: 333    Name: BR Bright Sax Lead
+    ID: 334    Name: BR Bright Hit
+    ID: 335    Name: BR Funky Sax Lead
+    ID: 336    Name: BR Bright Blare
+    ID: 337    Name: BR Bold Brass Pad
+    ID: 338    Name: BR Bright Stab
+    ID: 339    Name: BR Epic Blare
+    ID: 340    Name: BR Funky Funk Horns
+    ID: 341    Name: BR Smooth Horns
+    ID: 342    Name: BR Punchy Funk Horns
+    ID: 343    Name: BR Warm Brass Pad
+    ID: 344    Name: BR Epic Section
+    ID: 345    Name: BR Smooth Section
+    ID: 346    Name: BR Epic Trumpet
+    ID: 347    Name: BR Bold Horns
+    ID: 348    Name: BR Bright Trumpet
+    ID: 349    Name: BR Smooth Blare
+    ID: 350    Name: ARP Trance Clockwork
+    ID: 351    Name: ARP Gated Sequence
+    ID: 352    Name: ARP Fast Arp
+    ID: 353    Name: ARP Rolling Ripple
+    ID: 354    Name: ARP Bouncy Stream
+    ID: 355    Name: ARP Bouncy Sequence
+    ID: 356    Name: ARP Trance Orbit
+    ID: 357    Name: ARP Melodic Sequence
+    ID: 358    Name: ARP Fast Ladder
+    ID: 359    Name: ARP Bouncy Runner
+    ID: 360    Name: ARP Gated Clockwork
+    ID: 361    Name: ARP Bright Clockwork
+    ID: 362    Name: ARP Bright Orbit
+    ID: 363    Name: ARP Fast Sequence
+    ID: 364    Name: ARP Stepped Sequence
+    ID: 365    Name: ARP Bouncy Pulse
+    ID: 366    Name: ARP Rolling Arp
+    ID: 367    Name: ARP Bright Ladder
+    ID: 368    Name: ARP Fast Ripple
+    ID: 369    Name: ARP Bright Circuit
+    ID: 370    Name: ARP Dark Chase
+    ID: 371    Name: ARP Hypnotic Stream
+    ID: 372    Name: ARP Gated Ripple
+    ID: 373    Name: ARP Dark Spiral
+    ID: 374    Name: ARP Fast Runner
+    ID: 375    Name: ARP Rolling Chase
+    ID: 376    Name: ARP Stepped Pattern
+    ID: 377    Name: ARP Dark Stream
+    ID: 378    Name: ARP Trance Arp
+    ID: 379    Name: ARP Fast Cascade
+    ID: 380    Name: ARP Fast Stream
+    ID: 381    Name: ARP Melodic Circuit
+    ID: 382    Name: ARP Bouncy Cascade
+    ID: 383    Name: ARP Stepped Pulse
+    ID: 384    Name: ARP Hypnotic Clockwork
+    ID: 385    Name: ARP Rolling Clockwork
+    ID: 386    Name: ARP Trance Chase
+    ID: 387    Name: ARP Melodic Motion
+    ID: 388    Name: ARP Rolling Runner
+    ID: 389    Name: ARP Melodic Ladder
+    ID: 390    Name: ARP Bright Pulse
+    ID: 391    Name: ARP Bouncy Ripple
+    ID: 392    Name: ARP Melodic Arp
+    ID: 393    Name: ARP Melodic Spiral
+    ID: 394    Name: ARP Bouncy Clockwork
+    ID: 395    Name: ARP Stepped Clockwork
+    ID: 396    Name: ARP Melodic Ripple
+    ID: 397    Name: ARP Dark Sequence
+    ID: 398    Name: ARP Melodic Runner
+    ID: 399    Name: ARP Stepped Arp
+    ID: 400    Name: PD Warm Dream
+    ID: 401    Name: PD Lush Ocean
+    ID: 402    Name: PD Evolving Aurora
+    ID: 403    Name: PD Ethereal Choir
+    ID: 404    Name: PD Dark Space
+    ID: 405    Name: PD Wide Atmosphere
+    ID: 406    Name: PD Lush Strings
+    ID: 407    Name: PD Evolving Haze
+    ID: 408    Name: PD Warm Ocean
+    ID: 409    Name: PD Lush Haze
+    ID: 410    Name: PD Wide Horizon
+    ID: 411    Name: PD Wide Dream
+    ID: 412    Name: PD Lush Bloom
+    ID: 413    Name: PD Soft Horizon
+    ID: 414    Name: PD Ethereal Breath
+    ID: 415    Name: PD Wide Cloud
+    ID: 416    Name: PD Soft Ocean
+    ID: 417    Name: PD Wide Space
+    ID: 418    Name: PD Evolving Breath
+    ID: 419    Name: PD Wide Haze
+    ID: 420    Name: PD Ethereal Bloom
+    ID: 421    Name: PD Shimmer Atmosphere
+    ID: 422    Name: PD Slow Aurora
+    ID: 423    Name: PD Slow Dream
+    ID: 424    Name: PD Slow Horizon
+    ID: 425    Name: PD Soft Cloud
+    ID: 426    Name: PD Slow Space
+    ID: 427    Name: PD Soft Haze
+    ID: 428    Name: PD Evolving Strings
+    ID: 429    Name: PD Ethereal Cloud
+    ID: 430    Name: PD Dark Choir
+    ID: 431    Name: PD Evolving Horizon
+    ID: 432    Name: PD Warm Breath
+    ID: 433    Name: PD Warm Horizon
+    ID: 434    Name: PD Slow Atmosphere
+    ID: 435    Name: PD Ethereal Dream
+    ID: 436    Name: PD Soft Atmosphere
+    ID: 437    Name: PD Lush Aurora
+    ID: 438    Name: PD Airy Horizon
+    ID: 439    Name: PD Warm Cloud
+    ID: 440    Name: LD Smooth Voice
+    ID: 441    Name: LD Thin Cry
+    ID: 442    Name: LD Sweet Square Lead
+    ID: 443    Name: LD Thin Scream
+    ID: 444    Name: LD Bright Lead
+    ID: 445    Name: LD Fat Whistle
+    ID: 446    Name: LD Classic Hero
+    ID: 447    Name: LD Fat Scream
+    ID: 448    Name: LD Smooth Hero
+    ID: 449    Name: LD Retro Lead
+    ID: 450    Name: LD Sharp Cry
+    ID: 451    Name: LD Sharp Solo
+    ID: 452    Name: LD Classic Solo
+    ID: 453    Name: LD Sharp Voice
+    ID: 454    Name: LD Classic Sing
+    ID: 455    Name: LD Detuned Sing
+    ID: 456    Name: LD Sharp Square Lead
+    ID: 457    Name: LD Thin Lead
+    ID: 458    Name: LD Smooth Scream
+    ID: 459    Name: LD Retro Saw Lead
+    ID: 460    Name: LD Sweet Saw Lead
+    ID: 461    Name: LD Bright Hook
+    ID: 462    Name: LD Smooth Solo
+    ID: 463    Name: LD Retro Cry
+    ID: 464    Name: LD Sharp Scream
+    ID: 465    Name: LD Thin Solo
+    ID: 466    Name: LD Fat Saw Lead
+    ID: 467    Name: LD Emotional Scream
+    ID: 468    Name: LD Fat Lead
+    ID: 469    Name: LD Detuned Square Lead
+    ID: 470    Name: LD Emotional Cry
+    ID: 471    Name: LD Retro Hero
+    ID: 472    Name: LD Bright Saw Lead
+    ID: 473    Name: LD Bright Sing
+    ID: 474    Name: LD Sharp Saw Lead
+    ID: 475    Name: LD Retro Whistle
+    ID: 476    Name: LD Emotional Lead
+    ID: 477    Name: LD Emotional Saw Lead
+    ID: 478    Name: LD Fat Sing
+    ID: 479    Name: LD Emotional Sing
+    ID: 480    Name: KY Warm Clav
+    ID: 481    Name: KY Soft Upright
+    ID: 482    Name: KY Dusty Piano
+    ID: 483    Name: KY Bright Organ
+    ID: 484    Name: KY Bright Grand
+    ID: 485    Name: KY Bright EP
+    ID: 486    Name: KY Soft Rhodes
+    ID: 487    Name: KY Mellow Grand
+    ID: 488    Name: KY Warm Wurli
+    ID: 489    Name: KY Bright House Piano
+    ID: 490    Name: KY Warm Grand
+    ID: 491    Name: KY Soft Piano
+    ID: 492    Name: KY Mellow House Piano
+    ID: 493    Name: KY Mellow Organ
+    ID: 494    Name: KY Classic EP
+    ID: 495    Name: KY Classic Clav
+    ID: 496    Name: KY Dusty Rhodes
+    ID: 497    Name: KY Classic House Piano
+    ID: 498    Name: KY Bright Clav
+    ID: 499    Name: KY Soft Keys
+    ID: 500    Name: PN Grand Emotional
+    ID: 501    Name: PN Grand Bright
+    ID: 502    Name: PN Grand Soft Felt
+    ID: 503    Name: PN House Piano 90s
+    ID: 504    Name: PN House Piano Classic
+    ID: 505    Name: PN Deep House Chords
+    ID: 506    Name: PN Upright Warm
+    ID: 507    Name: PN Upright Dusty
+    ID: 508    Name: PN Lofi Tape Piano
+    ID: 509    Name: PN Night Ballad
+    ID: 510    Name: PN Sunrise Keys
+    ID: 511    Name: PN Stab Piano
+    ID: 512    Name: PN Wide Cinematic
+    ID: 513    Name: PN Soft Pop Piano
+    ID: 514    Name: PN Mayfar Signature
+
+VERIFYING CLASS INFO
+    PASS
+
+TESTING HOST CALLBACKS
+    PASS
+
+* * PASS
+--------------------------------------------------
+PUBLISHED PARAMETER INFO:
+
+# # # 51 Global Scope Parameters:
+Parameter ID:3357411
+Name: Mono
+Parameter Type: Boolean
+Values: Minimum = Off, Default = Off, Maximum = On
+Flags: Values Have Strings, High Resolution, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:3734228
+Name: Filter Mode
+Parameter Type: Indexed
+Values: Minimum = LP24, Default = LP24, Maximum = BP
+Flags: Values Have Strings, High Resolution, Readable, Writable 
+Parameter has Value Strings
+Num Strings = 3
+Value: 0,  String: LP24
+Value: 1,  String: HP
+Value: 2,  String: BP
+  -parameter PASS
+
+Parameter ID:3874048
+Name: Resonance
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 20%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:98444197
+Name: Glide
+Parameter Type: Generic
+Values: Minimum = 0 ms, Default = 0 ms, Maximum = 500 ms
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:107544185
+Name: Drive
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 10%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:345463330
+Name: Velocity > Amp
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 40%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:354337203
+Name: Chorus
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 20%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:430722010
+Name: Osc 4 Level
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 0%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:433116891
+Name: LFO Target
+Parameter Type: Indexed
+Values: Minimum = Cutoff, Default = Cutoff, Maximum = Volume
+Flags: Values Have Strings, High Resolution, Readable, Writable 
+Parameter has Value Strings
+Num Strings = 4
+Value: 0,  String: Cutoff
+Value: 1,  String: Pitch
+Value: 2,  String: Shape
+Value: 3,  String: Volume
+  -parameter PASS
+
+Parameter ID:434533270
+Name: Osc 4 Pitch
+Parameter Type: Generic
+Values: Minimum = -24, Default = 0, Maximum = 24
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:437256183
+Name: Osc 4 Shape
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 30%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:618688123
+Name: FX Low Cut
+Parameter Type: Generic
+Values: Minimum = Off, Default = 120 Hz, Maximum = 500 Hz
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:697597098
+Name: LFO Rate
+Parameter Type: Generic
+Values: Minimum = 0.05 Hz, Default = 0.55 Hz, Maximum = 20.00 Hz
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:729961681
+Name: Sustain
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 70%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:732782056
+Name: Decay
+Parameter Type: Generic
+Values: Minimum = 1 ms, Default = 608 ms, Maximum = 6.00 s
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:738256831
+Name: Arp
+Parameter Type: Boolean
+Values: Minimum = Off, Default = Off, Maximum = On
+Flags: Values Have Strings, High Resolution, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:781199839
+Name: Reverb
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 25%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:795291328
+Name: Arp Rate
+Parameter Type: Indexed
+Values: Minimum = 1/8, Default = 1/16, Maximum = 1/16T
+Flags: Values Have Strings, High Resolution, Readable, Writable 
+Parameter has Value Strings
+Num Strings = 3
+Value: 0,  String: 1/8
+Value: 1,  String: 1/16
+Value: 2,  String: 1/16T
+  -parameter PASS
+
+Parameter ID:803198296
+Name: Osc 2 Level
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 0%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:807009556
+Name: Osc 2 Pitch
+Parameter Type: Generic
+Values: Minimum = -24, Default = 0, Maximum = 24
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:809732469
+Name: Osc 2 Shape
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 30%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:886450543
+Name: FX Mix
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 50%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:922040061
+Name: Keytrack
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 50%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1021298383
+Name: Velocity > Cutoff
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 20%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1026576099
+Name: Arp Octaves
+Parameter Type: Generic
+Values: Minimum = 1, Default = 1, Maximum = 3
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1066216034
+Name: Master
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 70%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1095819703
+Name: Unison Width
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 50%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1105483975
+Name: Osc 1 Fine
+Parameter Type: Generic
+Values: Minimum = -100 ct, Default = 0 ct, Maximum = 100 ct
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1105982982
+Name: Osc 1 Wave
+Parameter Type: Indexed
+Values: Minimum = Saw, Default = Supersaw, Maximum = Wavetable
+Flags: Values Have Strings, High Resolution, Readable, Writable 
+Parameter has Value Strings
+Num Strings = 7
+Value: 0,  String: Saw
+Value: 1,  String: Square
+Value: 2,  String: Sine
+Value: 3,  String: Triangle
+Value: 4,  String: Supersaw
+Value: 5,  String: Noise
+Value: 6,  String: Wavetable
+  -parameter PASS
+
+Parameter ID:1134113126
+Name: Osc 2 Fine
+Parameter Type: Generic
+Values: Minimum = -100 ct, Default = 0 ct, Maximum = 100 ct
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1134612133
+Name: Osc 2 Wave
+Parameter Type: Indexed
+Values: Minimum = Saw, Default = Saw, Maximum = Wavetable
+Flags: Values Have Strings, High Resolution, Readable, Writable 
+Parameter has Value Strings
+Num Strings = 7
+Value: 0,  String: Saw
+Value: 1,  String: Square
+Value: 2,  String: Sine
+Value: 3,  String: Triangle
+Value: 4,  String: Supersaw
+Value: 5,  String: Noise
+Value: 6,  String: Wavetable
+  -parameter PASS
+
+Parameter ID:1160848606
+Name: Cutoff
+Parameter Type: Generic
+Values: Minimum = 20 Hz, Default = 2.5 kHz, Maximum = 20.0 kHz
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1162742277
+Name: Osc 3 Fine
+Parameter Type: Generic
+Values: Minimum = -100 ct, Default = 0 ct, Maximum = 100 ct
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1163241284
+Name: Osc 3 Wave
+Parameter Type: Indexed
+Values: Minimum = Saw, Default = Saw, Maximum = Wavetable
+Flags: Values Have Strings, High Resolution, Readable, Writable 
+Parameter has Value Strings
+Num Strings = 7
+Value: 0,  String: Saw
+Value: 1,  String: Square
+Value: 2,  String: Sine
+Value: 3,  String: Triangle
+Value: 4,  String: Supersaw
+Value: 5,  String: Noise
+Value: 6,  String: Wavetable
+  -parameter PASS
+
+Parameter ID:1169878490
+Name: Attack
+Parameter Type: Generic
+Values: Minimum = 1 ms, Default = 4 ms, Maximum = 6.00 s
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1191371428
+Name: Osc 4 Fine
+Parameter Type: Generic
+Values: Minimum = -100 ct, Default = 0 ct, Maximum = 100 ct
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1191870435
+Name: Osc 4 Wave
+Parameter Type: Indexed
+Values: Minimum = Saw, Default = Saw, Maximum = Wavetable
+Flags: Values Have Strings, High Resolution, Readable, Writable 
+Parameter has Value Strings
+Num Strings = 7
+Value: 0,  String: Saw
+Value: 1,  String: Square
+Value: 2,  String: Sine
+Value: 3,  String: Triangle
+Value: 4,  String: Supersaw
+Value: 5,  String: Noise
+Value: 6,  String: Wavetable
+  -parameter PASS
+
+Parameter ID:1210986024
+Name: Unison Detune
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 15%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1385586076
+Name: Filter Env
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 30%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1467007958
+Name: Delay
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 15%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1524964021
+Name: Release
+Parameter Type: Generic
+Values: Minimum = 1 ms, Default = 608 ms, Maximum = 6.00 s
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1690701977
+Name: Osc 3 Level
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 0%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1694513237
+Name: Osc 3 Pitch
+Parameter Type: Generic
+Values: Minimum = -24, Default = 0, Maximum = 24
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1697236150
+Name: Osc 3 Shape
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 30%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1709894899
+Name: Distortion
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 0%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1710341966
+Name: Reverb Size
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 60%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:1735200688
+Name: Unison Voices
+Parameter Type: Generic
+Values: Minimum = 1, Default = 1, Maximum = 7
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:2047653282
+Name: LFO Amount
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 0%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:2063178263
+Name: Osc 1 Level
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 80%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:2066989523
+Name: Osc 1 Pitch
+Parameter Type: Generic
+Values: Minimum = -24, Default = 0, Maximum = 24
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Parameter ID:2069712436
+Name: Osc 1 Shape
+Parameter Type: Generic
+Values: Minimum = 0%, Default = 30%, Maximum = 100%
+Flags: Values Have Strings, High Resolution, Can Ramp, Readable, Writable 
+  -parameter PASS
+
+Testing that parameters retain value across reset and initialization
+  PASS
+
+* * PASS
+--------------------------------------------------
+FORMAT TESTS:
+
+Reported Channel Capabilities (explicit):
+      [0, 1]  [0, 2]  
+
+No Input, Output Chans:
+0-1   0-2   0-4   0-5   0-6   0-7   0-8
+X     X                                   
+
+# # AudioChannelLayouts (5), Output Scope:
+ChannelLayout is Writable: T
+The Unit publishes the following Channel Layouts:
+  0x640001, 0x650002, 0x660002, 0x670002, 0x6A0002, 
+
+Is Audio Channel Layout Available:
+Mono    Stereo  Binau.  AU_4    Ambi.   AU_5    AU_5_0  AU_6    AU_6_0  AU_7_0  AU_7_0F AU_8    AU_5_1  AU_6_1  AU_7_1  AU_7_1F 
+X       X       X                                                                                                               
+
+Current Format:AudioStreamBasicDescription:  2 ch,  44100 Hz, Float32, deinterleaved
+Current Format Tag = 0x650002, New Format Tag = 0x640001, Success - did not reset format with mis-matched layout
+
+Current Format:AudioStreamBasicDescription:  2 ch,  44100 Hz, Float32, deinterleaved
+Current Format Tag = 0x650002, New Format Tag = 0x650002, Successsful
+
+Current Format:AudioStreamBasicDescription:  2 ch,  44100 Hz, Float32, deinterleaved
+Current Format Tag = 0x650002, New Format Tag = 0x6A0002, Successsful
+
+* * PASS
+--------------------------------------------------
+RENDER TESTS:
+
+Output Format: AudioStreamBasicDescription:  2 ch,  44100 Hz, Float32, deinterleaved
+Render Test at 512 frames
+Slicing Render Test at 64 frames
+  PASS
+
+
+Render Test at 64 frames, sample rate: 22050 Hz
+Render Test at 137 frames, sample rate: 96000 Hz
+Render Test at 4096 frames, sample rate: 48000 Hz
+Render Test at 4096 frames, sample rate: 192000 Hz
+Render Test at 4096 frames, sample rate: 11025 Hz
+Render Test at 512 frames, sample rate: 44100 Hz
+  PASS
+
+1 Channel Test:
+Render Test at 512 frames
+  PASS
+
+Bad Max Frames - Render should fail
+  PASS
+
+Checking parameter setting
+Using AudioUnitSetParameter
+Using AudioUnitScheduleParameter
+  PASS
+
+Checking ramped parameter scheduling
+  PASS
+
+Test MIDI
+  PASS
+
+* * PASS
+--------------------------------------------------
+AU VALIDATION SUCCEEDED.
+--------------------------------------------------

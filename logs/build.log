@@ -1,0 +1,1633 @@
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm:35:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp:61:2: warning: This version of JUCE does not use the splash screen, the flag JUCE_DISPLAY_SPLASH_SCREEN is ignored [-W#pragma-messages]
+   61 |  JUCE_COMPILER_WARNING ("This version of JUCE does not use the splash screen, the flag JUCE_DISPLAY_SPLASH_SCREEN is ignored")
+      |  ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm:35:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp:55:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.h:68:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics.h:67:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_core/juce_core.h:215:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_core/system/juce_StandardHeader.h:94:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_core/system/juce_PlatformDefs.h:286:38: note: expanded from macro 'JUCE_COMPILER_WARNING'
+  286 |  #define JUCE_COMPILER_WARNING(msg)  _Pragma (JUCE_STRINGIFY (message (msg)))
+      |                                      ^
+<scratch space>:240:2: note: expanded from here
+  240 |  message ("This version of JUCE does not use the splash screen, the flag JUCE_DISPLAY_SPLASH_SCREEN is ignored")
+      |  ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm:35:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp:187:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/native/juce_NSViewComponentPeer_mac.mm:1636:23: warning: variable 'target' set but not used [-Wunused-but-set-variable]
+ 1636 |             if (auto* target = findCurrentTextInputTarget())
+      |                       ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/native/juce_NSViewComponentPeer_mac.mm:1900:17: warning: enumeration value 'NSEventTypeMouseCancelled' not explicitly handled in switch [-Wswitch-enum]
+ 1900 |         switch ([e type])
+      |                 ^~~~~~~~
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/native/juce_NSViewComponentPeer_mac.mm:1900:17: note: add missing switch cases
+ 1900 |         switch ([e type])
+      |                 ^
+3 warnings generated.
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:192:33: note: in instantiation of member function 'CrapHelper<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>::get_crap' requested here
+  192 |   static Type & get () { return Crap (Type); }
+      |                                 ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:551:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-array.hh:83:36: note: in instantiation of member function 'CrapOrNullHelper<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>::get' requested here
+   83 |     if (unlikely (!length)) return CrapOrNull (Type);
+      |                                    ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:198:50: note: expanded from macro 'CrapOrNull'
+  198 | #define CrapOrNull(Type) CrapOrNullHelper<Type>::get ()
+      |                                                  ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:549:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:89:41: note: in instantiation of member function 'hb_array_t<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>::__item__' requested here
+   89 |   item_t operator * () { return thiz()->__item__ (); }
+      |                                         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:456:55: note: in instantiation of member function 'hb_iter_t<hb_array_t<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>, hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t &>::operator*' requested here
+  456 |   { while (it && !hb_has (p.get (), hb_get (f.get (), *it))) ++it; }
+      |                                                       ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:482:12: note: in instantiation of member function 'hb_filter_iter_t<hb_array_t<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>, bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>::hb_filter_iter_t' requested here
+  482 |   { return hb_filter_iter_t<Iter, Pred, Proj> (it, p, f); }
+      |            ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:369:51: note: in instantiation of function template specialization 'hb_filter_iter_factory_t<bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>::operator()<hb_array_t<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>, nullptr>' requested here
+  369 | operator | (Lhs&& lhs, Rhs&& rhs) HB_AUTO_RETURN (std::forward<Rhs> (rhs) (std::forward<Lhs> (lhs)))
+      |                                                   ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:37:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-serialize.hh:36:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-map.hh:424:5: note: in instantiation of function template specialization 'operator|<hb_array_t<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>, hb_filter_iter_factory_t<bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>, nullptr>' requested here
+  424 |     | hb_filter (&item_t::is_real)
+      |     ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:37:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-serialize.hh:36:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-map.hh:448:13: note: in instantiation of member function 'hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::iter_items' requested here
+  448 |     + this->iter_items ()
+      |             ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:37:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset.hh:38:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset-plan.hh:34:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset-accelerator.hh:34:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-multimap.hh:78:36: note: in instantiation of member function 'hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::values_ref' requested here
+   78 |     for (const auto &m : multiples.values_ref ())
+      |                                    ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_hashmap_t<unsigned int, Triple>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_hashmap_t<unsigned int, Triple>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:219:30: note: in instantiation of member function 'CrapHelper<hb_hashmap_t<unsigned int, Triple>>::get_crap' requested here
+  219 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:2688:15: note: in instantiation of function template specialization 'hb_vector_t<hb_hashmap_t<unsigned int, Triple>>::push<hb_hashmap_t<unsigned int, Triple>>' requested here
+ 2688 |       regions.push (std::move (axis_tuples));
+      |               ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_inc_bimap_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_inc_bimap_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:210:30: note: in instantiation of member function 'CrapHelper<hb_inc_bimap_t>::get_crap' requested here
+  210 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:3351:40: note: in instantiation of member function 'hb_vector_t<hb_inc_bimap_t>::push' requested here
+ 3351 |       hb_inc_bimap_t *map = inner_maps.push ();
+      |                                        ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::tuple_delta_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::tuple_delta_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:219:30: note: in instantiation of member function 'CrapHelper<OT::tuple_delta_t>::get_crap' requested here
+  219 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-os2-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-mvar-table.hh:30:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-common.hh:331:11: note: in instantiation of function template specialization 'hb_vector_t<OT::tuple_delta_t>::push<const OT::tuple_delta_t &>' requested here
+  331 |       out.push (*this);
+      |           ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:192:33: note: in instantiation of member function 'CrapHelper<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>::get_crap' requested here
+  192 |   static Type & get () { return Crap (Type); }
+      |                                 ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:551:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-array.hh:83:36: note: in instantiation of member function 'CrapOrNullHelper<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>::get' requested here
+   83 |     if (unlikely (!length)) return CrapOrNull (Type);
+      |                                    ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:198:50: note: expanded from macro 'CrapOrNull'
+  198 | #define CrapOrNull(Type) CrapOrNullHelper<Type>::get ()
+      |                                                  ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:549:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:89:41: note: in instantiation of member function 'hb_array_t<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>::__item__' requested here
+   89 |   item_t operator * () { return thiz()->__item__ (); }
+      |                                         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:456:55: note: in instantiation of member function 'hb_iter_t<hb_array_t<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>, hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t &>::operator*' requested here
+  456 |   { while (it && !hb_has (p.get (), hb_get (f.get (), *it))) ++it; }
+      |                                                       ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:482:12: note: in instantiation of member function 'hb_filter_iter_t<hb_array_t<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>, bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>::hb_filter_iter_t' requested here
+  482 |   { return hb_filter_iter_t<Iter, Pred, Proj> (it, p, f); }
+      |            ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:369:51: note: in instantiation of function template specialization 'hb_filter_iter_factory_t<bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>::operator()<hb_array_t<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>, nullptr>' requested here
+  369 | operator | (Lhs&& lhs, Rhs&& rhs) HB_AUTO_RETURN (std::forward<Rhs> (rhs) (std::forward<Lhs> (lhs)))
+      |                                                   ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:37:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-serialize.hh:36:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-map.hh:424:5: note: in instantiation of function template specialization 'operator|<hb_array_t<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>, hb_filter_iter_factory_t<bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>, nullptr>' requested here
+  424 |     | hb_filter (&item_t::is_real)
+      |     ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:37:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-serialize.hh:36:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-map.hh:428:13: note: in instantiation of member function 'hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::iter_items' requested here
+  428 |     + this->iter_items ()
+      |             ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-os2-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-mvar-table.hh:30:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-common.hh:1153:43: note: in instantiation of member function 'hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::iter_ref' requested here
+ 1153 |       for (const auto& _ : point_data_map.iter_ref ())
+      |                                           ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::TupleVariationData::tuple_variations_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::TupleVariationData::tuple_variations_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:219:30: note: in instantiation of member function 'CrapHelper<OT::TupleVariationData::tuple_variations_t>::get_crap' requested here
+  219 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-os2-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-mvar-table.hh:30:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-common.hh:1611:12: note: in instantiation of function template specialization 'hb_vector_t<OT::TupleVariationData::tuple_variations_t>::push<OT::TupleVariationData::tuple_variations_t>' requested here
+ 1611 |       vars.push (std::move (var_data_tuples));
+      |            ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_vector_t<int>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_vector_t<int>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<hb_vector_t<int>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-os2-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-mvar-table.hh:30:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-common.hh:1741:23: note: in instantiation of member function 'hb_vector_t<hb_vector_t<int>>::operator[]' requested here
+ 1741 |       if (!(delta_rows[i].resize (num_cols))) return false;
+      |                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::delta_row_encoding_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::delta_row_encoding_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:219:30: note: in instantiation of member function 'CrapHelper<OT::delta_row_encoding_t>::get_crap' requested here
+  219 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-os2-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-mvar-table.hh:30:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-common.hh:1784:19: note: in instantiation of function template specialization 'hb_vector_t<OT::delta_row_encoding_t>::push<OT::delta_row_encoding_t>' requested here
+ 1784 |         encodings.push (std::move (obj));
+      |                   ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::index_map_subset_plan_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::index_map_subset_plan_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<OT::index_map_subset_plan_t>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:34:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-hvar-table.hh:207:20: note: in instantiation of member function 'hb_vector_t<OT::index_map_subset_plan_t>::operator[]' requested here
+  207 |     index_map_plans[0].init (*index_maps[0], outer_map, inner_sets, plan, false);
+      |                    ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_set_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_set_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<hb_set_t>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:31:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset-cff-common.hh:387:21: note: in instantiation of member function 'hb_vector_t<hb_set_t>::operator[]' requested here
+  387 |       local_closures[i].clear();
+      |                     ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::parsed_cs_str_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::parsed_cs_str_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<CFF::parsed_cs_str_t>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:31:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset-cff-common.hh:604:33: note: in instantiation of member function 'hb_vector_t<CFF::parsed_cs_str_t>::operator[]' requested here
+  604 |           return &(*parsed_local_subrs)[context.subr_num];
+      |                                        ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff2_font_dict_values_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff2_font_dict_values_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:456:25: note: in instantiation of member function 'CrapHelper<CFF::cff2_font_dict_values_t>::get_crap' requested here
+  456 |         if (unlikely (font == &Crap (cff2_font_dict_values_t))) goto fail;
+      |                                ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:272:47: note: expanded from macro 'unlikely'
+  272 | #define unlikely(expr) __builtin_expect (bool(expr), 0)
+      |                                               ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:516:39: note: in instantiation of member function 'OT::cff2::accelerator_templ_t<CFF::cff2_private_dict_opset_t, CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>>::accelerator_templ_t' requested here
+  516 |     accelerator_t (hb_face_t *face) : accelerator_templ_t (face) {}
+      |                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:464:2: note: in instantiation of member function 'hb_vector_t<CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>>::operator[]' requested here
+  464 |         privateDicts[i].init ();
+      |         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:516:39: note: in instantiation of member function 'OT::cff2::accelerator_templ_t<CFF::cff2_private_dict_opset_t, CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>>::accelerator_templ_t' requested here
+  516 |     accelerator_t (hb_face_t *face) : accelerator_templ_t (face) {}
+      |                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff2_private_dict_values_base_t<CFF::op_str_t>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff2_private_dict_values_base_t<CFF::op_str_t>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<CFF::cff2_private_dict_values_base_t<CFF::op_str_t>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:464:2: note: in instantiation of member function 'hb_vector_t<CFF::cff2_private_dict_values_base_t<CFF::op_str_t>>::operator[]' requested here
+  464 |         privateDicts[i].init ();
+      |         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:528:46: note: in instantiation of member function 'OT::cff2::accelerator_templ_t<CFF::cff2_private_dict_opset_subset_t, CFF::cff2_private_dict_values_base_t<CFF::op_str_t>>::accelerator_templ_t' requested here
+  528 |     accelerator_subset_t (hb_face_t *face) : SUPER (face) {}
+      |                                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:7:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1159:2: note: in instantiation of member function 'hb_vector_t<CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>>::operator[]' requested here
+ 1159 |         privateDicts[i].init ();
+      |         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1360:39: note: in instantiation of member function 'OT::cff1::accelerator_templ_t<CFF::cff1_private_dict_opset_t, CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>>::accelerator_templ_t' requested here
+ 1360 |     accelerator_t (hb_face_t *face) : SUPER (face)
+      |                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff1_font_dict_values_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff1_font_dict_values_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:210:30: note: in instantiation of member function 'CrapHelper<CFF::cff1_font_dict_values_t>::get_crap' requested here
+  210 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:7:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1172:21: note: in instantiation of member function 'hb_vector_t<CFF::cff1_font_dict_values_t>::push' requested here
+ 1172 |           font = fontDicts.push ();
+      |                            ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1360:39: note: in instantiation of member function 'OT::cff1::accelerator_templ_t<CFF::cff1_private_dict_opset_t, CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>>::accelerator_templ_t' requested here
+ 1360 |     accelerator_t (hb_face_t *face) : SUPER (face)
+      |                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff1_private_dict_values_base_t<CFF::op_str_t>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff1_private_dict_values_base_t<CFF::op_str_t>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<CFF::cff1_private_dict_values_base_t<CFF::op_str_t>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:7:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1159:2: note: in instantiation of member function 'hb_vector_t<CFF::cff1_private_dict_values_base_t<CFF::op_str_t>>::operator[]' requested here
+ 1159 |         privateDicts[i].init ();
+      |         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1494:46: note: in instantiation of member function 'OT::cff1::accelerator_templ_t<CFF::cff1_private_dict_opset_subset_t, CFF::cff1_private_dict_values_base_t<CFF::op_str_t>>::accelerator_templ_t' requested here
+ 1494 |     accelerator_subset_t (hb_face_t *face) : SUPER (face) {}
+      |                                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_vector_t<hb_aat_map_t::range_flags_t, true>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_vector_t<hb_aat_map_t::range_flags_t, true>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<hb_vector_t<hb_aat_map_t::range_flags_t, true>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:2:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-aat-layout.cc:34:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-aat-layout-just-table.hh:32:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-aat-layout-morx-table.hh:1357:23: note: in instantiation of member function 'hb_vector_t<hb_vector_t<hb_aat_map_t::range_flags_t, true>>::operator[]' requested here
+ 1357 |       map->chain_flags[i].push (hb_aat_map_t::range_flags_t {chain->compile_flags (mapper),
+      |                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:2:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-aat-layout.cc:217:10: note: in instantiation of member function 'AAT::mortmorx<AAT::morx, AAT::ExtendedTypes, 1836020344>::compile_flags' requested here
+  217 |     morx.compile_flags (mapper, map);
+      |          ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::VariationSelectorRecord' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::VariationSelectorRecord>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:722:37: note: in instantiation of member function 'CrapHelper<OT::VariationSelectorRecord>::get_crap' requested here
+  722 |     if (unlikely (i >= len)) return Crap (Type);
+      |                                     ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:13:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-face.cc:35:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-ot-cmap-table.hh:1328:26: note: in instantiation of member function 'OT::ArrayOf<OT::VariationSelectorRecord, OT::IntType<unsigned int>>::operator[]' requested here
+ 1328 |       c->add_link (record[j].defaultUVS, obj_indices[i].first);
+      |                          ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::IndexSubtableRecord' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::IndexSubtableRecord>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<OT::IndexSubtableRecord>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:24:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-ot-color.cc:34:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Color/CBDT/CBDT.hh:607:66: note: in instantiation of member function 'hb_vector_t<OT::IndexSubtableRecord>::operator[]' requested here
+  607 |       IndexSubtableRecord* record = c->serializer->embed (records[i]);
+      |                                                                  ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+20 warnings generated.
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm:35:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp:61:2: warning: This version of JUCE does not use the splash screen, the flag JUCE_DISPLAY_SPLASH_SCREEN is ignored [-W#pragma-messages]
+   61 |  JUCE_COMPILER_WARNING ("This version of JUCE does not use the splash screen, the flag JUCE_DISPLAY_SPLASH_SCREEN is ignored")
+      |  ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm:35:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp:55:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.h:68:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics.h:67:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_core/juce_core.h:215:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_core/system/juce_StandardHeader.h:94:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_core/system/juce_PlatformDefs.h:286:38: note: expanded from macro 'JUCE_COMPILER_WARNING'
+  286 |  #define JUCE_COMPILER_WARNING(msg)  _Pragma (JUCE_STRINGIFY (message (msg)))
+      |                                      ^
+<scratch space>:377:2: note: expanded from here
+  377 |  message ("This version of JUCE does not use the splash screen, the flag JUCE_DISPLAY_SPLASH_SCREEN is ignored")
+      |  ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm:35:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp:187:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/native/juce_NSViewComponentPeer_mac.mm:1636:23: warning: variable 'target' set but not used [-Wunused-but-set-variable]
+ 1636 |             if (auto* target = findCurrentTextInputTarget())
+      |                       ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/native/juce_NSViewComponentPeer_mac.mm:1900:17: warning: enumeration value 'NSEventTypeMouseCancelled' not explicitly handled in switch [-Wswitch-enum]
+ 1900 |         switch ([e type])
+      |                 ^~~~~~~~
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_gui_basics/native/juce_NSViewComponentPeer_mac.mm:1900:17: note: add missing switch cases
+ 1900 |         switch ([e type])
+      |                 ^
+3 warnings generated.
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:192:33: note: in instantiation of member function 'CrapHelper<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>::get_crap' requested here
+  192 |   static Type & get () { return Crap (Type); }
+      |                                 ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:551:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-array.hh:83:36: note: in instantiation of member function 'CrapOrNullHelper<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>::get' requested here
+   83 |     if (unlikely (!length)) return CrapOrNull (Type);
+      |                                    ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:198:50: note: expanded from macro 'CrapOrNull'
+  198 | #define CrapOrNull(Type) CrapOrNullHelper<Type>::get ()
+      |                                                  ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:549:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:89:41: note: in instantiation of member function 'hb_array_t<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>::__item__' requested here
+   89 |   item_t operator * () { return thiz()->__item__ (); }
+      |                                         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:456:55: note: in instantiation of member function 'hb_iter_t<hb_array_t<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>, hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t &>::operator*' requested here
+  456 |   { while (it && !hb_has (p.get (), hb_get (f.get (), *it))) ++it; }
+      |                                                       ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:482:12: note: in instantiation of member function 'hb_filter_iter_t<hb_array_t<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>, bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>::hb_filter_iter_t' requested here
+  482 |   { return hb_filter_iter_t<Iter, Pred, Proj> (it, p, f); }
+      |            ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:369:51: note: in instantiation of function template specialization 'hb_filter_iter_factory_t<bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>::operator()<hb_array_t<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>, nullptr>' requested here
+  369 | operator | (Lhs&& lhs, Rhs&& rhs) HB_AUTO_RETURN (std::forward<Rhs> (rhs) (std::forward<Lhs> (lhs)))
+      |                                                   ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:37:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-serialize.hh:36:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-map.hh:424:5: note: in instantiation of function template specialization 'operator|<hb_array_t<hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::item_t>, hb_filter_iter_factory_t<bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>, nullptr>' requested here
+  424 |     | hb_filter (&item_t::is_real)
+      |     ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:37:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-serialize.hh:36:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-map.hh:448:13: note: in instantiation of member function 'hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::iter_items' requested here
+  448 |     + this->iter_items ()
+      |             ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:37:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset.hh:38:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset-plan.hh:34:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset-accelerator.hh:34:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-multimap.hh:78:36: note: in instantiation of member function 'hb_hashmap_t<unsigned int, hb_vector_t<unsigned int>>::values_ref' requested here
+   78 |     for (const auto &m : multiples.values_ref ())
+      |                                    ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_hashmap_t<unsigned int, Triple>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_hashmap_t<unsigned int, Triple>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:219:30: note: in instantiation of member function 'CrapHelper<hb_hashmap_t<unsigned int, Triple>>::get_crap' requested here
+  219 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:2688:15: note: in instantiation of function template specialization 'hb_vector_t<hb_hashmap_t<unsigned int, Triple>>::push<hb_hashmap_t<unsigned int, Triple>>' requested here
+ 2688 |       regions.push (std::move (axis_tuples));
+      |               ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_inc_bimap_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_inc_bimap_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:210:30: note: in instantiation of member function 'CrapHelper<hb_inc_bimap_t>::get_crap' requested here
+  210 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:3351:40: note: in instantiation of member function 'hb_vector_t<hb_inc_bimap_t>::push' requested here
+ 3351 |       hb_inc_bimap_t *map = inner_maps.push ();
+      |                                        ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::tuple_delta_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::tuple_delta_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:219:30: note: in instantiation of member function 'CrapHelper<OT::tuple_delta_t>::get_crap' requested here
+  219 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-os2-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-mvar-table.hh:30:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-common.hh:331:11: note: in instantiation of function template specialization 'hb_vector_t<OT::tuple_delta_t>::push<const OT::tuple_delta_t &>' requested here
+  331 |       out.push (*this);
+      |           ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:192:33: note: in instantiation of member function 'CrapHelper<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>::get_crap' requested here
+  192 |   static Type & get () { return Crap (Type); }
+      |                                 ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:551:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-array.hh:83:36: note: in instantiation of member function 'CrapOrNullHelper<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>::get' requested here
+   83 |     if (unlikely (!length)) return CrapOrNull (Type);
+      |                                    ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:198:50: note: expanded from macro 'CrapOrNull'
+  198 | #define CrapOrNull(Type) CrapOrNullHelper<Type>::get ()
+      |                                                  ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:549:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:89:41: note: in instantiation of member function 'hb_array_t<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>::__item__' requested here
+   89 |   item_t operator * () { return thiz()->__item__ (); }
+      |                                         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:456:55: note: in instantiation of member function 'hb_iter_t<hb_array_t<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>, hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t &>::operator*' requested here
+  456 |   { while (it && !hb_has (p.get (), hb_get (f.get (), *it))) ++it; }
+      |                                                       ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:482:12: note: in instantiation of member function 'hb_filter_iter_t<hb_array_t<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>, bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>::hb_filter_iter_t' requested here
+  482 |   { return hb_filter_iter_t<Iter, Pred, Proj> (it, p, f); }
+      |            ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-iter.hh:369:51: note: in instantiation of function template specialization 'hb_filter_iter_factory_t<bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>::operator()<hb_array_t<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>, nullptr>' requested here
+  369 | operator | (Lhs&& lhs, Rhs&& rhs) HB_AUTO_RETURN (std::forward<Rhs> (rhs) (std::forward<Lhs> (lhs)))
+      |                                                   ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:37:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-serialize.hh:36:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-map.hh:424:5: note: in instantiation of function template specialization 'operator|<hb_array_t<hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::item_t>, hb_filter_iter_factory_t<bool (item_t::*)() const, const (unnamed struct at /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-algs.hh:228:1) &>, nullptr>' requested here
+  424 |     | hb_filter (&item_t::is_real)
+      |     ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:37:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset.hh:36:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-serialize.hh:36:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-map.hh:428:13: note: in instantiation of member function 'hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::iter_items' requested here
+  428 |     + this->iter_items ()
+      |             ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:543:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-meta.hh:76:55: note: expanded from macro 'HB_AUTO_RETURN'
+   76 | #define HB_AUTO_RETURN(E) -> decltype ((E)) { return (E); }
+      |                                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-os2-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-mvar-table.hh:30:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-common.hh:1153:43: note: in instantiation of member function 'hb_hashmap_t<const hb_vector_t<bool> *, hb_vector_t<char>>::iter_ref' requested here
+ 1153 |       for (const auto& _ : point_data_map.iter_ref ())
+      |                                           ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::TupleVariationData::tuple_variations_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::TupleVariationData::tuple_variations_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:219:30: note: in instantiation of member function 'CrapHelper<OT::TupleVariationData::tuple_variations_t>::get_crap' requested here
+  219 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-os2-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-mvar-table.hh:30:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-common.hh:1611:12: note: in instantiation of function template specialization 'hb_vector_t<OT::TupleVariationData::tuple_variations_t>::push<OT::TupleVariationData::tuple_variations_t>' requested here
+ 1611 |       vars.push (std::move (var_data_tuples));
+      |            ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_vector_t<int>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_vector_t<int>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<hb_vector_t<int>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-os2-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-mvar-table.hh:30:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-common.hh:1741:23: note: in instantiation of member function 'hb_vector_t<hb_vector_t<int>>::operator[]' requested here
+ 1741 |       if (!(delta_rows[i].resize (num_cols))) return false;
+      |                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::delta_row_encoding_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::delta_row_encoding_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:219:30: note: in instantiation of member function 'CrapHelper<OT::delta_row_encoding_t>::get_crap' requested here
+  219 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-os2-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-mvar-table.hh:30:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-common.hh:1784:19: note: in instantiation of function template specialization 'hb_vector_t<OT::delta_row_encoding_t>::push<OT::delta_row_encoding_t>' requested here
+ 1784 |         encodings.push (std::move (obj));
+      |                   ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::index_map_subset_plan_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::index_map_subset_plan_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<OT::index_map_subset_plan_t>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:5:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-glyf-table.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/glyf.hh:7:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-hmtx-table.hh:34:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../OT/glyf/../../hb-ot-var-hvar-table.hh:207:20: note: in instantiation of member function 'hb_vector_t<OT::index_map_subset_plan_t>::operator[]' requested here
+  207 |     index_map_plans[0].init (*index_maps[0], outer_map, inner_sets, plan, false);
+      |                    ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_set_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_set_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<hb_set_t>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:31:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset-cff-common.hh:387:21: note: in instantiation of member function 'hb_vector_t<hb_set_t>::operator[]' requested here
+  387 |       local_closures[i].clear();
+      |                     ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::parsed_cs_str_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::parsed_cs_str_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<CFF::parsed_cs_str_t>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:31:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-subset-cff-common.hh:604:33: note: in instantiation of member function 'hb_vector_t<CFF::parsed_cs_str_t>::operator[]' requested here
+  604 |           return &(*parsed_local_subrs)[context.subr_num];
+      |                                        ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff2_font_dict_values_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff2_font_dict_values_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:456:25: note: in instantiation of member function 'CrapHelper<CFF::cff2_font_dict_values_t>::get_crap' requested here
+  456 |         if (unlikely (font == &Crap (cff2_font_dict_values_t))) goto fail;
+      |                                ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:272:47: note: expanded from macro 'unlikely'
+  272 | #define unlikely(expr) __builtin_expect (bool(expr), 0)
+      |                                               ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:516:39: note: in instantiation of member function 'OT::cff2::accelerator_templ_t<CFF::cff2_private_dict_opset_t, CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>>::accelerator_templ_t' requested here
+  516 |     accelerator_t (hb_face_t *face) : accelerator_templ_t (face) {}
+      |                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:464:2: note: in instantiation of member function 'hb_vector_t<CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>>::operator[]' requested here
+  464 |         privateDicts[i].init ();
+      |         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:516:39: note: in instantiation of member function 'OT::cff2::accelerator_templ_t<CFF::cff2_private_dict_opset_t, CFF::cff2_private_dict_values_base_t<CFF::dict_val_t>>::accelerator_templ_t' requested here
+  516 |     accelerator_t (hb_face_t *face) : accelerator_templ_t (face) {}
+      |                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff2_private_dict_values_base_t<CFF::op_str_t>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff2_private_dict_values_base_t<CFF::op_str_t>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<CFF::cff2_private_dict_values_base_t<CFF::op_str_t>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:6:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:464:2: note: in instantiation of member function 'hb_vector_t<CFF::cff2_private_dict_values_base_t<CFF::op_str_t>>::operator[]' requested here
+  464 |         privateDicts[i].init ();
+      |         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff2-table.hh:528:46: note: in instantiation of member function 'OT::cff2::accelerator_templ_t<CFF::cff2_private_dict_opset_subset_t, CFF::cff2_private_dict_values_base_t<CFF::op_str_t>>::accelerator_templ_t' requested here
+  528 |     accelerator_subset_t (hb_face_t *face) : SUPER (face) {}
+      |                                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:7:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1159:2: note: in instantiation of member function 'hb_vector_t<CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>>::operator[]' requested here
+ 1159 |         privateDicts[i].init ();
+      |         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1360:39: note: in instantiation of member function 'OT::cff1::accelerator_templ_t<CFF::cff1_private_dict_opset_t, CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>>::accelerator_templ_t' requested here
+ 1360 |     accelerator_t (hb_face_t *face) : SUPER (face)
+      |                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff1_font_dict_values_t' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff1_font_dict_values_t>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:210:30: note: in instantiation of member function 'CrapHelper<CFF::cff1_font_dict_values_t>::get_crap' requested here
+  210 |       return std::addressof (Crap (Type));
+      |                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:7:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1172:21: note: in instantiation of member function 'hb_vector_t<CFF::cff1_font_dict_values_t>::push' requested here
+ 1172 |           font = fontDicts.push ();
+      |                            ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1360:39: note: in instantiation of member function 'OT::cff1::accelerator_templ_t<CFF::cff1_private_dict_opset_t, CFF::cff1_private_dict_values_base_t<CFF::dict_val_t>>::accelerator_templ_t' requested here
+ 1360 |     accelerator_t (hb_face_t *face) : SUPER (face)
+      |                                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'CFF::cff1_private_dict_values_base_t<CFF::op_str_t>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<CFF::cff1_private_dict_values_base_t<CFF::op_str_t>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<CFF::cff1_private_dict_values_base_t<CFF::op_str_t>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:7:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1159:2: note: in instantiation of member function 'hb_vector_t<CFF::cff1_private_dict_values_base_t<CFF::op_str_t>>::operator[]' requested here
+ 1159 |         privateDicts[i].init ();
+      |         ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-cff1-table.hh:1494:46: note: in instantiation of member function 'OT::cff1::accelerator_templ_t<CFF::cff1_private_dict_opset_subset_t, CFF::cff1_private_dict_values_base_t<CFF::op_str_t>>::accelerator_templ_t' requested here
+ 1494 |     accelerator_subset_t (hb_face_t *face) : SUPER (face) {}
+      |                                              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'hb_vector_t<hb_aat_map_t::range_flags_t, true>' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<hb_vector_t<hb_aat_map_t::range_flags_t, true>>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<hb_vector_t<hb_aat_map_t::range_flags_t, true>>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:2:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-aat-layout.cc:34:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-aat-layout-just-table.hh:32:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-aat-layout-morx-table.hh:1357:23: note: in instantiation of member function 'hb_vector_t<hb_vector_t<hb_aat_map_t::range_flags_t, true>>::operator[]' requested here
+ 1357 |       map->chain_flags[i].push (hb_aat_map_t::range_flags_t {chain->compile_flags (mapper),
+      |                       ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:2:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-aat-layout.cc:217:10: note: in instantiation of member function 'AAT::mortmorx<AAT::morx, AAT::ExtendedTypes, 1836020344>::compile_flags' requested here
+  217 |     morx.compile_flags (mapper, map);
+      |          ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::VariationSelectorRecord' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::VariationSelectorRecord>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.cc:1:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/VARC.hh:4:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout-common.hh:33:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-ot-layout.hh:36:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Var/VARC/../../../hb-open-type.hh:722:37: note: in instantiation of member function 'CrapHelper<OT::VariationSelectorRecord>::get_crap' requested here
+  722 |     if (unlikely (i >= len)) return Crap (Type);
+      |                                     ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:13:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-face.cc:35:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-ot-cmap-table.hh:1328:26: note: in instantiation of member function 'OT::ArrayOf<OT::VariationSelectorRecord, OT::IntType<unsigned int>>::operator[]' requested here
+ 1328 |       c->add_link (record[j].defaultUVS, obj_indices[i].first);
+      |                          ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'OT::IndexSubtableRecord' [-Wnontrivial-memcall]
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:186:38: note: in instantiation of function template specialization 'Crap<OT::IndexSubtableRecord>' requested here
+  186 |   static Type & get_crap () { return Crap<Type> (); }
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:552:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-vector.hh:159:14: note: in instantiation of member function 'CrapHelper<OT::IndexSubtableRecord>::get_crap' requested here
+  159 |       return Crap (Type);
+      |              ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:188:38: note: expanded from macro 'Crap'
+  188 | #define Crap(Type) CrapHelper<Type>::get_crap ()
+      |                                      ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:92:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/harfbuzz.cc:24:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-ot-color.cc:34:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/OT/Color/CBDT/CBDT.hh:607:66: note: in instantiation of member function 'hb_vector_t<OT::IndexSubtableRecord>::operator[]' requested here
+  607 |       IndexSubtableRecord* record = c->serializer->embed (records[i]);
+      |                                                                  ^
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp:91:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb.hh:547:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_graphics/fonts/harfbuzz/hb-null.hh:179:11: note: explicitly cast the pointer to silence this warning
+  179 |   memcpy (obj, std::addressof (Null (Type)), sizeof (*obj));
+      |           ^
+      |           (void*)
+20 warnings generated.
+libtool: warning: 'juce_audio_processors_ara.o' has no symbols
+libtool: warning: 'juce_audio_processors_lv2_libs.o' has no symbols
+libtool: warning: 'juce_audio_processors_ara.o' has no symbols
+libtool: warning: 'juce_audio_processors_lv2_libs.o' has no symbols
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm:35:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.cpp:51:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/juce_VST3Headers.h:153:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/VST3_SDK/base/source/fstring.cpp:41:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/VST3_SDK/pluginterfaces/base/fvariant.h:51:31: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'Steinberg::FVariant' [-Wnontrivial-memcall]
+   51 |         inline FVariant () { memset (this, 0, sizeof (FVariant)); }
+      |                                      ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/VST3_SDK/pluginterfaces/base/fvariant.h:51:31: note: explicitly cast the pointer to silence this warning
+   51 |         inline FVariant () { memset (this, 0, sizeof (FVariant)); }
+      |                                      ^
+      |                                      (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/VST3_SDK/pluginterfaces/base/fvariant.h:260:10: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'Steinberg::FVariant' [-Wnontrivial-memcall]
+  260 |         memset (this, 0, sizeof (FVariant));
+      |                 ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/VST3_SDK/pluginterfaces/base/fvariant.h:260:10: note: explicitly cast the pointer to silence this warning
+  260 |         memset (this, 0, sizeof (FVariant));
+      |                 ^
+      |                 (void*)
+2 warnings generated.
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm:35:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.cpp:51:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/juce_VST3Headers.h:153:
+In file included from /Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/VST3_SDK/base/source/fstring.cpp:41:
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/VST3_SDK/pluginterfaces/base/fvariant.h:51:31: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'Steinberg::FVariant' [-Wnontrivial-memcall]
+   51 |         inline FVariant () { memset (this, 0, sizeof (FVariant)); }
+      |                                      ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/VST3_SDK/pluginterfaces/base/fvariant.h:51:31: note: explicitly cast the pointer to silence this warning
+   51 |         inline FVariant () { memset (this, 0, sizeof (FVariant)); }
+      |                                      ^
+      |                                      (void*)
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/VST3_SDK/pluginterfaces/base/fvariant.h:260:10: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'Steinberg::FVariant' [-Wnontrivial-memcall]
+  260 |         memset (this, 0, sizeof (FVariant));
+      |                 ^
+/Users/runner/work/Rato/Rato/build/_deps/juce-src/modules/juce_audio_processors/format_types/VST3_SDK/pluginterfaces/base/fvariant.h:260:10: note: explicitly cast the pointer to silence this warning
+  260 |         memset (this, 0, sizeof (FVariant));
+      |                 ^
+      |                 (void*)
+2 warnings generated.
+note: Run script build phase 'Generate CMakeFiles/ZERO_CHECK' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'ZERO_CHECK' from project 'RATO')
+note: Run script build phase 'Generate CMakeFiles/ALL_BUILD' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'ALL_BUILD' from project 'RATO')
+note: Run script build phase 'CMake PostBuild Rules' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'RATO_VST3' from project 'RATO')
+note: Run script build phase 'CMake PostBuild Rules' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'RATO_Standalone' from project 'RATO')
+note: Run script build phase 'CMake PostBuild Rules' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'RATO_AU' from project 'RATO')
