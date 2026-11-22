@@ -22,7 +22,7 @@ jobs:
           curl -sSfL -o Resources/KaushanScript-Regular.ttf "https://github.com/google/fonts/raw/main/ofl/kaushanscript/KaushanScript-Regular.ttf"
           curl -sSfL -o Resources/LexendExa.ttf "https://github.com/google/fonts/raw/main/ofl/lexendexa/LexendExa%5Bwght%5D.ttf"
 
-      - name: Configure (universal binary: Apple Silicon + Intel)
+      - name: "Configure (universal binary, Apple Silicon + Intel)"
         run: |
           mkdir -p logs
           cmake -B build -G Xcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" 2>&1 | tee logs/configure.log
