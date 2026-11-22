@@ -1,0 +1,92 @@
+name: Build RATO for macOS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-14
+    timeout-minutes: 60
+    env:
+      VERSION: "1.1.0"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download fonts (SIL Open Font License)
+        run: |
+          curl -sSfL -o Resources/KaushanScript-Regular.ttf "https://github.com/google/fonts/raw/main/ofl/kaushanscript/KaushanScript-Regular.ttf"
+          curl -sSfL -o Resources/LexendExa.ttf "https://github.com/google/fonts/raw/main/ofl/lexendexa/LexendExa%5Bwght%5D.ttf"
+
+      - name: Configure (universal binary: Apple Silicon + Intel)
+        run: |
+          mkdir -p logs
+          cmake -B build -G Xcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" 2>&1 | tee logs/configure.log
+
+      - name: Build VST3, AU and Standalone
+        run: |
+          set -o pipefail
+          cmake --build build --config Release --parallel 4 -- -quiet 2>&1 | tee logs/build.log
+
+      - name: Sign (ad-hoc) and check architectures
+        run: |
+          A=build/RATO_artefacts/Release
+          for b in "$A/VST3/RATO.vst3" "$A/AU/RATO.component" "$A/Standalone/RATO.app"; do
+            codesign --force --deep --sign - "$b"
+            codesign --verify --deep --strict "$b"
+          done
+          lipo -info "$A/VST3/RATO.vst3/Contents/MacOS/RATO" | tee logs/arch.log
+          lipo -info "$A/AU/RATO.component/Contents/MacOS/RATO" | tee -a logs/arch.log
+
+      - name: Validate Audio Unit (auval)
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          mkdir -p ~/Library/Audio/Plug-Ins/Components
+          cp -R build/RATO_artefacts/Release/AU/RATO.component ~/Library/Audio/Plug-Ins/Components/
+          killall -9 AudioComponentRegistrar 2>/dev/null || true
+          sleep 3
+          auval -v aumu Rato Myfr 2>&1 | tee logs/auval.log
+          grep -q "AU VALIDATION SUCCEEDED" logs/auval.log
+
+      - name: Validate VST3 (pluginval, strictness 5)
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          curl -sSfL -o pluginval.zip https://github.com/Tracktion/pluginval/releases/latest/download/pluginval_macOS.zip
+          unzip -q pluginval.zip
+          ./pluginval.app/Contents/MacOS/pluginval --strictness-level 5 --validate-in-process --timeout-ms 300000 \
+            --output-dir logs build/RATO_artefacts/Release/VST3/RATO.vst3 2>&1 | tee logs/pluginval.log
+
+      - name: Build installer
+        run: |
+          A=build/RATO_artefacts/Release
+          R=pkgroot
+          mkdir -p "$R/Library/Audio/Plug-Ins/VST3" "$R/Library/Audio/Plug-Ins/Components" "$R/Applications" dist
+          cp -R "$A/VST3/RATO.vst3" "$R/Library/Audio/Plug-Ins/VST3/"
+          cp -R "$A/AU/RATO.component" "$R/Library/Audio/Plug-Ins/Components/"
+          cp -R "$A/Standalone/RATO.app" "$R/Applications/"
+          pkgbuild --root "$R" --identifier com.mayfar.rato --version "$VERSION" \
+                   --scripts packaging/scripts --install-location / RATO-Installer.pkg
+          mkdir -p "RATO-$VERSION-macOS"
+          cp RATO-Installer.pkg packaging/INSTALL.txt "RATO-$VERSION-macOS/"
+          ditto -c -k --keepParent "RATO-$VERSION-macOS" "dist/RATO-$VERSION-macOS-Installer.zip"
+          mkdir -p plugins && cp -R "$A/VST3/RATO.vst3" "$A/AU/RATO.component" plugins/
+          ditto -c -k --keepParent plugins "dist/RATO-$VERSION-macOS-Plugins-only.zip"
+          ls -la dist | tee logs/dist.log
+
+      - name: Publish build to the "builds" branch
+        if: always()
+        run: |
+          mkdir -p out && cp -R logs out/ && cp -R dist out/ 2>/dev/null || true
+          echo "${{ github.sha }} ${{ job.status }}" > out/STATUS.txt
+          cd out
+          git init -q
+          git checkout -q -b builds
+          git add -A
+          git -c user.name="RATO CI" -c user.email="ci@users.noreply.github.com" commit -qm "Build of ${{ github.sha }}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" builds

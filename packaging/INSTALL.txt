@@ -1,0 +1,15 @@
+RATO by MAYFAR - installation (macOS 11 or newer, Apple Silicon and Intel)
+
+1. Double-click "RATO-Installer.pkg".
+   If macOS says it cannot check the installer for malicious software:
+   open System Settings > Privacy & Security, scroll down and click "Open Anyway",
+   then open the installer again. (RATO is not yet signed with an Apple Developer ID.)
+2. Follow the installer. It installs:
+     /Library/Audio/Plug-Ins/VST3/RATO.vst3
+     /Library/Audio/Plug-Ins/Components/RATO.component   (Audio Unit)
+     /Applications/RATO.app                              (standalone, for quick testing)
+3. FL Studio: Options > Manage plugins > "Find installed plugins" (or "Find more plugins"),
+   then tick the star next to RATO so it shows up in the Plugin database.
+   Add it to a channel like any other instrument: Channel rack > + > RATO.
+
+User presets you save are stored in ~/Music/RATO Presets.
